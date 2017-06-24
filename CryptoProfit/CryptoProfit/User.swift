@@ -13,6 +13,7 @@ class User {
     private var username: String = ""
     private var password: String = ""
     private var positions: [Position] = []
+    var coinCount: [String: Int] = [:]
     
     init(username: String, password: String, positions: [Position]) {
         self.username = username
@@ -58,6 +59,26 @@ class User {
     func addPosition(position: Position) -> Void {
         self.positions.append(position)
         
+    }
+    
+    func getCoinCount(positions: [Position]) -> [String: Int] {
+        for position in positions {
+            if position.isOpen() { //If the position is a buy order
+                let coinType = position.getCoinType() //Get positions coin tpye
+                let cryptoAmount = position.getPositionAmount() //Gets amount of coin ordered
+                coinCount[coinType] = coinCount[coinType]! + cryptoAmount
+            }
+            
+            if !position.isOpen() { //Check if position was a sell order
+                
+                let coinType = position.getCoinType() //Get positions coin tpye
+                let cryptoAmount = position.getPositionAmount() //Gets amount of coin ordered
+                coinCount[coinType] = coinCount[coinType]! - cryptoAmount
+                
+            }
+            
+        }
+        return coinCount
     }
     
     
