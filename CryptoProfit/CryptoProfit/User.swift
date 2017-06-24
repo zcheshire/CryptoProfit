@@ -10,9 +10,15 @@ import Foundation
 
 class User {
     
-    var username: String = ""
-    var password: String = ""
-    var positions: [Position] = []
+    private var username: String = ""
+    private var password: String = ""
+    private var positions: [Position] = []
+    
+    init(username: String, password: String, positions: [Position]) {
+        self.username = username
+        self.password = password
+        self.positions = positions
+    }
     
     func getUsername() -> String {
         
