@@ -17,6 +17,7 @@ class Calculator {
     var profit: Double = 0
     var closed: Double = 0
     var positions: [Positions] = []
+    var tickers: [String] = []
     
     func getProfit() -> Double {
         do {
@@ -25,8 +26,8 @@ class Calculator {
             
         } catch {
             
-            
             //handle error
+            
         }
        
         for position in positions {
@@ -52,6 +53,26 @@ class Calculator {
             
         }
         return profit
+        
+    }
+    func getTickers() -> [String] {
+        do {
+            
+            positions = try context.fetch(Positions.fetchRequest())
+            
+        } catch {
+            
+            
+            //handle error
+        }
+        
+        for position in positions {
+            if position.open && !tickers.contains(position.coinType!) { //If the position is a buy order
+                tickers.append(position.coinType!) //Get positions coin tpye
+            }
+            
+        }
+        return tickers
         
     }
     
