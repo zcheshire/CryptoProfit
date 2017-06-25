@@ -17,8 +17,8 @@ class TickerCellController: UITableViewCell {
 
 class ViewController: UIViewController {
     
-    let defaultTickers = ["BTC", "ETH", "ANS", "GNT", "SC"]
-    let defaultPrices = ["2513.90", "313.75", "7.95", "0.45", "0.019"]
+    var defaultTickers = ["BTC", "ETH", "ANS", "GNT", "SC"]
+    var defaultPrices = ["2513.90", "313.75", "7.95", "0.45", "0.019"]
     
     @IBOutlet weak var tickerTable: UITableView!
 
@@ -69,6 +69,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     }
     
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let tickerTitle = defaultTickers[sourceIndexPath.row]
+        let tickerPrice = defaultPrices[sourceIndexPath.row]
+        defaultTickers.remove(at: sourceIndexPath.row)
+        defaultPrices.remove(at: sourceIndexPath.row)
+        defaultTickers.insert(tickerTitle, at: destinationIndexPath.row)
+        defaultPrices.insert(tickerPrice, at: destinationIndexPath.row)
+    }
+
+    
     func tableView(_ tickerTable: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "DELETE") { action, index in
             print("deleted")
@@ -78,8 +92,5 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return [delete]
     }
     
-    func tableView(_ tickerTable: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
 
 }

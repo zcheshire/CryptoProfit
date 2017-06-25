@@ -19,6 +19,7 @@
 		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
 		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
+		5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */; };
 		8CC67F721EFDD17600260AB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F711EFDD17600260AB9 /* Model.swift */; };
 		8CC67F7D1EFDD9EA00260AB9 /* CryptoProfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
+		5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8CC67F7A1EFDD9E900260AB9 /* CryptoProfitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoProfitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoProfitTests.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				499400611EFDE32D00C61612 /* Model */,
 				8CC67F701EFDD15100260AB9 /* Backend */,
 				497A68131EFDC18A00ED2758 /* AppDelegate.swift */,
+				5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */,
 				497A68151EFDC18A00ED2758 /* ViewController.swift */,
 				497A68171EFDC18A00ED2758 /* Main.storyboard */,
 				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
@@ -249,6 +252,7 @@
 				4994005E1EFDE30C00C61612 /* User.swift in Sources */,
 				497A68141EFDC18A00ED2758 /* AppDelegate.swift in Sources */,
 				4994005C1EFDE2F500C61612 /* Position.swift in Sources */,
+				5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */,
 				8CC67F721EFDD17600260AB9 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
