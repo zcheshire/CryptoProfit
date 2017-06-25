@@ -28,6 +28,14 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DINWeb-Light.TTF</string>
+		<string>DINWeb-Medium.TTF</string>
+		<string>DINWeb-UltraLight.TTF</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -16,6 +16,9 @@
 		4994005C1EFDE2F500C61612 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994005B1EFDE2F500C61612 /* Position.swift */; };
 		4994005E1EFDE30C00C61612 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994005D1EFDE30C00C61612 /* User.swift */; };
 		499400601EFDE32500C61612 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994005F1EFDE32500C61612 /* Calculator.swift */; };
+		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
+		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
+		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
 		8CC67F721EFDD17600260AB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F711EFDD17600260AB9 /* Model.swift */; };
 		8CC67F7D1EFDD9EA00260AB9 /* CryptoProfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,9 @@
 		4994005B1EFDE2F500C61612 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		4994005D1EFDE30C00C61612 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4994005F1EFDE32500C61612 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
+		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
+		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8CC67F7A1EFDD9E900260AB9 /* CryptoProfitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoProfitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoProfitTests.swift; sourceTree = "<group>"; };
@@ -92,6 +98,9 @@
 				497A68131EFDC18A00ED2758 /* AppDelegate.swift */,
 				497A68151EFDC18A00ED2758 /* ViewController.swift */,
 				497A68171EFDC18A00ED2758 /* Main.storyboard */,
+				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
+				5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */,
+				5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */,
 				497A681D1EFDC18A00ED2758 /* Assets.xcassets */,
 				497A681F1EFDC18A00ED2758 /* LaunchScreen.storyboard */,
 				497A68221EFDC18A00ED2758 /* Info.plist */,
@@ -212,7 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				497A68211EFDC18A00ED2758 /* LaunchScreen.storyboard in Resources */,
+				5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */,
 				497A681E1EFDC18A00ED2758 /* Assets.xcassets in Resources */,
+				5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */,
+				5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */,
 				497A68191EFDC18A00ED2758 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
