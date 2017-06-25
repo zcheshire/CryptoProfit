@@ -10,6 +10,43 @@ import Foundation
 
 class Position {
     
+    private var coinType: String = ""
+    private var cryptoPrice: Double = 0
+    private var positionAmount: Double = 0
+    private var open: Bool = true
+    
+    init(coinType: String, cryptoPrice: Double, positionAmount: Double, open: Bool) {
+        self.coinType = coinType
+        self.cryptoPrice = cryptoPrice
+        self.positionAmount = positionAmount
+        self.open = open
+        let position = Positions(context: context)
+        position.coinType = coinType
+        position.cryptoPrice = cryptoPrice
+        position.open = open
+        position.positionAmount = positionAmount
+        appDelegate.saveContext()
+    }
+    
+    func getCoinType() -> String {
+        return coinType
+    }
+    
+    func getCrptoPrice() -> Double {
+        return cryptoPrice
+        
+    }
+    
+    
+    func getPositionAmount() -> Double {
+        return positionAmount
+    }
+    
+    func isOpen() -> Bool {
+        return open
+    }
+    
+    
     
     
     
