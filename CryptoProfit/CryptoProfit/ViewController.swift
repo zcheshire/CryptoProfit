@@ -35,9 +35,10 @@ class ViewController: UIViewController {
         //setting background color of tickerTable
         tickerTable.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
         
+        //Creating Navigation Bar with Bookmark Placeholder (Menu) and Search
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: self.view.frame.size.width, height: 44))
         self.view.addSubview(navBar);
-        let navItem = UINavigationItem(title: "Cowboy Killer");
+        let navItem = UINavigationItem(title: "Moon");
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
         navItem.rightBarButtonItem = searchItem;
@@ -47,6 +48,8 @@ class ViewController: UIViewController {
         navBar.barTintColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
         navBar.tintColor = UIColor.white
         navBar.isTranslucent = false
+        
+        
         
     }
 
