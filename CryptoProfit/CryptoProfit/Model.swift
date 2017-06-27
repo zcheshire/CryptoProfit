@@ -14,20 +14,21 @@ public class Model {
     private var data: [String: String] = [:]
     
     public func Model(){
-        url = "https://min-api.cryptocompare.com/data/price?"
+        url = "https://min-api.cryptocompare.com/data/pricemulti?"
     }
     
-    public func refresh(base: String, tickers: [String]){
-        var path = url + "fsym=" + base + "&tsyms="
+    public func refresh(tickers: [String], base: String){
+        var fsyms = ""
         //var result = ""
         
         for (index, t) in tickers.enumerated() {
             if (index < tickers.count - 1) {
-                path += t + ","
+                fsyms += t + ","
             } else {
-                path += t
+                fsyms += t
             }
         }
+         var path = url + "fsyms=" + fsyms + "&tsyms=" + base
         print(path)
         
         let urlString = URL(string: path)

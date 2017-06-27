@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491210431F01DE7B004FA63F /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491210421F01DE7B004FA63F /* ModelTests.swift */; };
 		497A68141EFDC18A00ED2758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A68131EFDC18A00ED2758 /* AppDelegate.swift */; };
 		497A68161EFDC18A00ED2758 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A68151EFDC18A00ED2758 /* ViewController.swift */; };
 		497A68191EFDC18A00ED2758 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497A68171EFDC18A00ED2758 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		491210421F01DE7B004FA63F /* ModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		497A68101EFDC18A00ED2758 /* CryptoProfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoProfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497A68131EFDC18A00ED2758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497A68151EFDC18A00ED2758 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8CC67F7A1EFDD9E900260AB9 /* CryptoProfitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoProfitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoProfitTests.swift; sourceTree = "<group>"; };
+		8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoProfitTests.swift; path = CryptoProfitTests/CryptoProfitTests.swift; sourceTree = SOURCE_ROOT; };
 		8CC67F7E1EFDD9EA00260AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,8 @@
 				499400611EFDE32D00C61612 /* Model */,
 				8CC67F701EFDD15100260AB9 /* Backend */,
 				497A68131EFDC18A00ED2758 /* AppDelegate.swift */,
+				491210421F01DE7B004FA63F /* ModelTests.swift */,
+				8CC67F711EFDD17600260AB9 /* Model.swift */,
 				5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */,
 				497A68151EFDC18A00ED2758 /* ViewController.swift */,
 				497A68171EFDC18A00ED2758 /* Main.storyboard */,
@@ -125,7 +129,6 @@
 		8CC67F701EFDD15100260AB9 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				8CC67F711EFDD17600260AB9 /* Model.swift */,
 			);
 			name = Backend;
 			sourceTree = "<group>";
@@ -184,7 +187,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = zcheshire;
 				TargetAttributes = {
 					497A680F1EFDC18A00ED2758 = {
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491210431F01DE7B004FA63F /* ModelTests.swift in Sources */,
 				497A681C1EFDC18A00ED2758 /* CryptoProfit.xcdatamodeld in Sources */,
 				497A68161EFDC18A00ED2758 /* ViewController.swift in Sources */,
 				499400601EFDE32500C61612 /* Calculator.swift in Sources */,
@@ -313,6 +317,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -362,6 +367,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
