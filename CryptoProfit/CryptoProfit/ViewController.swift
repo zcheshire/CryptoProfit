@@ -17,16 +17,22 @@ class TickerCellController: UITableViewCell {
 
 class ViewController: UIViewController {
     
-    var defaultTickers = ["","","","",""]
+    var seperate: [String: Double] = [:]
+    var defaultTickers: [String] = ["","","","",""]
     var defaultPrices: [Double] = [0.0,0.0,0.0,0.0,0.0]
+
     @IBOutlet weak var tickerTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-            model.refresh(tickers: model.getCurrentUser().getWatchList() , base: "USD")
+        defaultTickers = model.getCurrentUser().getWatchList()
+            model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
+        _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
+
             self.refresh()
         }
+        
+        
 
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,27 +69,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //Method to resfresh the table when the data is loaded
-    func refresh() {
-        var seperate: [String: Double]
-        self.defaultTickers = []
-        self.defaultPrices = []
-        
-        seperate = model.getData()
-        for (k, v) in seperate {
-            self.defaultTickers.append(k)
-            self.defaultPrices.append(v)
-        }
-        self.tickerTable.reloadData()
-        
-        
-    }
 
 
 }
 
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    //Method to resfresh the table when the data is loaded
+    
+    func refresh() {
+        self.defaultTickers = []
+        self.defaultPrices = []
+        seperate = model.getData()
+        
+        for (k, v) in seperate {
+            self.defaultTickers.append(k)
+            self.defaultPrices.append(v)
+        }
+        self.tickerTable.reloadData()
+        
+    }
     
     func tableView(_ tickerTable: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Runs loop until the data is loaded from the api
@@ -100,9 +105,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
             
         //Filling cell tickerLabel with array index : need to replace with ticker object
-        cell.tickerLabel.text = defaultTickers[indexPath.row]
-       let dp = defaultPrices[indexPath.row]
-        cell.priceLabel.text = "$\(dp)"
+        cell.tickerLabel.text = model.getCurrentUser().getWatchList()[indexPath.row]
+         let dp = seperate[model.getCurrentUser().getWatchList()[indexPath.row]]
+        if dp != nil {
+            print("PLACING LABEL")
+            print(dp)
+        cell.priceLabel.text = ("\(dp!)")
+        } else {
+         cell.priceLabel.text = "0"
+        }
         
             
         //returning populated cell to tickerTable

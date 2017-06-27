@@ -13,7 +13,7 @@ class User {
     private var username: String = ""
     private var password: String = ""
     private var positions: [Position] = []
-    private var watchListTickers = ["ETH","BTC","SC","ANS","GNT"]
+    private var watchListTickers = ["","","","",""]
     
     init(username: String, password: String, positions: [Position], tickers: [String]) {
         self.username = username
@@ -27,6 +27,10 @@ class User {
     }
     func addTicker(ticker: String) -> Void {
         self.watchListTickers.append(ticker)
+    }
+    func setWatchList(watchList: [String]) -> Void {
+        
+        self.watchListTickers = watchList
     }
     
     func getUsername() -> String {

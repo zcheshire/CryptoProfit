@@ -13,10 +13,11 @@ var model = Model()
 public class Model {
     private var url: String = ""
     
-    private var data: [String: [String: Any]] = [:]
-    private var tickers: [String] = []
+    var data: [String: [String: Any]] = [:]
+    //private var tickers: [String] = []
     private var prices: [Double] = []
-    private var currentUser = User(username: "Jim", password: "123", positions: [], tickers: ["ETH","BTC","SC","ANS","GNT"])
+    private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: ["ETH","BTC","ANS","GNT","LTC"])
+  
     
     public func Model(){
     }
@@ -29,10 +30,12 @@ public class Model {
     }
     
     public func refresh(tickers: [String], base: String){
+        print("TICKERS IN REFRESH")
+        print(tickers)
         var fsyms = ""
          url = "https://min-api.cryptocompare.com/data/pricemulti?"
         //var result = ""
-        self.tickers = tickers
+        //self.tickers = tickers
         
         for (index, t) in tickers.enumerated() {
             if (index < tickers.count - 1) {
@@ -57,11 +60,12 @@ public class Model {
             do {
                 let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
                 guard let responseDict = responseObject as? [String: [String: Any]] else {
+                    print("WRONG")
                     return
                 }
                 print(responseDict)
-                
                 self.data = responseDict
+                
 
                
                 
@@ -74,7 +78,7 @@ public class Model {
     
     public func getData()-> [String: Double] {
         var tickersWithPrices: [String: Double] = [:]
-        for (k, v) in data {
+        for (k, v) in self.data {
             tickersWithPrices[k] = v["USD"] as? Double
             print(v["USD"]!)
         }
