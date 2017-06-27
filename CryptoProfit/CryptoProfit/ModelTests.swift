@@ -2,34 +2,17 @@
 //  ModelTests.swift
 //  CryptoProfit
 //
-//  Created by Jack Bonaguro on 6/23/17.
+//  Created by Zachary Cheshire on 6/26/17.
 //  Copyright © 2017 zcheshire. All rights reserved.
 //
 
 import Foundation
-import UIKit
-import XCTest
 
-class ModelTests: XCTestCase {
-    var model: BackendModel!
-    
-    func ModelTests() {
-        
-    }
-    override func setUp() {
-        super.setUp()
-        
-        self.model = Backend.Model()!
+class ModelTests {
+    var results: String = ""
+    var model = Model()
+    func callAPI(tickers: [String], base: String) -> Void {
+        model.refresh(tickers: tickers, base: base)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func TestRefresh(){
-        self.model.refresh(base: "USD", tickers: ["ETH", "BTC", "ANS"])
-        print(self.model.getData(base: "USD"))
-        XCTAssert(self.model.getData(base: "USD"))
-    }
-};
+}
