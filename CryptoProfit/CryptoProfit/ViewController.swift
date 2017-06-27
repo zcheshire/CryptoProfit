@@ -35,6 +35,19 @@ class ViewController: UIViewController {
         //setting background color of tickerTable
         tickerTable.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
         
+        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: self.view.frame.size.width, height: 44))
+        self.view.addSubview(navBar);
+        let navItem = UINavigationItem(title: "Cowboy Killer");
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
+        navItem.rightBarButtonItem = searchItem;
+        let bookmarkItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
+        navItem.leftBarButtonItem = bookmarkItem;
+        navBar.setItems([navItem], animated: false);
+        navBar.barTintColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        navBar.tintColor = UIColor.white
+        navBar.isTranslucent = false
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +86,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return true
     }
     
+    //Updating tickerTabel when reordering cells
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let tickerTitle = defaultTickers[sourceIndexPath.row]
         let tickerPrice = defaultPrices[sourceIndexPath.row]
@@ -82,7 +96,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         defaultPrices.insert(tickerPrice, at: destinationIndexPath.row)
     }
 
-    
+    //Creating cell slide button for delete
     func tableView(_ tickerTable: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "DELETE") { action, index in
             print("deleted")
