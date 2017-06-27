@@ -9,78 +9,76 @@
 import Foundation
 
 class Calculator {
-    var initialPosition: Double = 0
-    var currentPosition: Double = 0
-    var coinType: String = ""
-    var cryptoPrice: Double = 0
-    var cryptoAmount: Double = 0
-    var profit: Double = 0
-    var closed: Double = 0
-    var positions: [Positions] = []
-    var tickers: [String] = []
+
+    private var positions: [Positions] = []
     
-    func getProfit() -> Double {
-        do {
-            
-            positions = try context.fetch(Positions.fetchRequest())
-            
-        } catch {
-            
-            //handle error
-            
-        }
-       
-        for position in positions {
-            if position.open { //If the position is a buy order
-                coinType = position.coinType! //Get positions coin tpye
-                cryptoPrice = position.cryptoPrice //Get coins price at time of order
-                cryptoAmount = position.positionAmount //Gets amount of coin ordered
-                initialPosition = initialPosition + (cryptoPrice * cryptoAmount) //Calculates usd of total amount invested
-                currentPosition = currentPosition + 1 //+ (model.getCrpytoPrice(coinType) * cryptoAmount) //Calculates how much the position is currently worth
-                profit = profit + (currentPosition - initialPosition) //Add difference of initial position value and current position value
-            }
-            
-            if !position.open { //Check if position was a sell order
-                
-                coinType = position.coinType! //Get positions coin type
-                cryptoPrice = position.cryptoPrice //Get coins price at time of sell order
-                cryptoAmount = position.positionAmount //Get amount of coin sold
-                closed = initialPosition - (cryptoPrice * cryptoAmount) // Gets total usd value of the sell position
-                //currentPosition = currentPosition + 1 //+ (model.getCrpytoPrice(coinType) * cryptoAmount)
-                profit = profit - closed //Subtract sold amount from total profit
-                
-            }
-            
-        }
-        return profit
-        
-    }
-    func getTickers() -> [String] {
-        do {
-            
-            positions = try context.fetch(Positions.fetchRequest())
-            
-        } catch {
-            
-            
-            //handle error
-        }
-        
-        for position in positions {
-            if position.open && !tickers.contains(position.coinType!) { //If the position is a buy order
-                tickers.append(position.coinType!) //Get positions coin tpye
-            }
-            
-        }
-        return tickers
-        
+    init(positions: [Positions]) {
+        self.positions = positions
     }
     
-    func getTotalInvestment(positions: [Position]) -> Int {
-        
-        return 0
+   /*
+     Returns users total investment in usd based off of all open positions
+ 
+     */
+    func getTotalInvested() -> Double {
+        return 0.0
     }
     
+    /*
+     Returns users current total portfolio value
+     
+     */
+    func getPortfolioValue() -> Double {
+        return 0.0
+    }
+    
+    /*
+     Returns users current total proft
+     
+     */
+    func getPortfolioProfit() -> Double {
+        return 0.0
+    }
+    
+    /*
+     Returns users current total profit for a particular coin in usd
+     
+     */
+    func getProfitForCoin(coin: String) -> Double {
+        return 0.0
+    }
+    
+    /*
+     Returns users total investment for a particular coin in usd
+     
+     */
+    func getTotalInvestmentForCoin(coin: String) -> Double {
+        return 0.0
+    }
+    
+    /*
+     Returns users total number of coins for a particular coin
+     
+     */
+    func getAmountForCoin(coin: String) -> Double {
+        return 0.0
+    }
+    
+    /*
+     Returns users current market value for a particular coin
+     
+     */
+    func getTotalValueForCoin(coin: String) -> Double {
+        return 0.0
+    }
+    
+    /*
+     Returns array of tickers in the users watchlist
+     
+     */
+    func getWatchList() -> [String] {
+        return [""]
+    }
     
     
 }

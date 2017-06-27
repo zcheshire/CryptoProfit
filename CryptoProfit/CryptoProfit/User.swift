@@ -12,10 +12,10 @@ class User {
     
     private var username: String = ""
     private var password: String = ""
-    private var positions: [Position] = []
+    private var positions: [Positions] = []
     var coinCount: [String: Double] = [:]
     
-    init(username: String, password: String, positions: [Position]) {
+    init(username: String, password: String, positions: [Positions]) {
         self.username = username
         self.password = password
         self.positions = positions
@@ -39,7 +39,7 @@ class User {
         
     }
     
-    func getPositions() -> [Position] {
+    func getPositions() -> [Positions] {
     
         return positions
     
@@ -60,31 +60,16 @@ class User {
         self.password = password
     }
     
-    func addPosition(position: Position) -> Void {
+    func addPosition(position: Positions) -> Void {
         self.positions.append(position)
         
     }
     
-    func getCoinCount() -> [String: Double] {
-        var coinType: String
-        var cryptoAmount: Double
-        for position in positions {
-            if position.isOpen() { //If the position is a buy order
-                coinType = position.getCoinType() //Get positions coin tpye
-                cryptoAmount = position.getPositionAmount() //Gets amount of coin ordered
-                coinCount[coinType] = coinCount[coinType]! + cryptoAmount
-            }
-            
-            if !position.isOpen() { //Check if position was a sell order
-                
-                coinType = position.getCoinType() //Get positions coin tpye
-                cryptoAmount = position.getPositionAmount() //Gets amount of coin ordered
-                coinCount[coinType] = coinCount[coinType]! - cryptoAmount
-                
-            }
-            
-        }
-        return coinCount
+    func calculatePosition() -> Calculator {
+        
+        let calc = Calculator(positions: getPositions())
+        return calc
+        
     }
     
     
