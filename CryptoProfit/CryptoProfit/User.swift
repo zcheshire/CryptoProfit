@@ -12,17 +12,21 @@ class User {
     
     private var username: String = ""
     private var password: String = ""
-    private var positions: [Positions] = []
-    var coinCount: [String: Double] = [:]
+    private var positions: [Position] = []
+    private var watchListTickers = ["ETH","BTC","SC","ANS","GNT"]
     
-    init(username: String, password: String, positions: [Positions]) {
+    init(username: String, password: String, positions: [Position], tickers: [String]) {
         self.username = username
+        self.watchListTickers = tickers
         self.password = password
         self.positions = positions
-        let user = Users(context: context)
-        user.username = username
-        user.password = password
-        appDelegate.saveContext()
+    }
+    
+    func getWatchList() -> [String] {
+        return watchListTickers
+    }
+    func addTicker(ticker: String) -> Void {
+        self.watchListTickers.append(ticker)
     }
     
     func getUsername() -> String {
@@ -39,7 +43,7 @@ class User {
         
     }
     
-    func getPositions() -> [Positions] {
+    func getPositions() -> [Position] {
     
         return positions
     
@@ -60,17 +64,11 @@ class User {
         self.password = password
     }
     
-    func addPosition(position: Positions) -> Void {
+    func addPosition(position: Position) -> Void {
         self.positions.append(position)
         
     }
     
-    func calculatePosition() -> Calculator {
-        
-        let calc = Calculator(positions: getPositions())
-        return calc
-        
-    }
     
     
     

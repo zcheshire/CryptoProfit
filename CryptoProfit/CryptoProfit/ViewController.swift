@@ -17,20 +17,17 @@ class TickerCellController: UITableViewCell {
 
 class ViewController: UIViewController {
     
-    var defaultTickers = ["BTC", "ETH", "ANS", "GNT", "SC"]
-    var defaultPrices = [""]
-    var model = Model()
-    
+    var defaultTickers = ["","","","",""]
+    var defaultPrices: [Double] = [0.0,0.0,0.0,0.0,0.0]
     @IBOutlet weak var tickerTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        model.refresh(tickers: defaultTickers, base: "USD")
-        //for (key, value) in model.getData() {
-          //  print(value)
-            //defaultPrices.append(value)
-            
-        //}
+        _ = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            model.refresh(tickers: model.getCurrentUser().getWatchList() , base: "USD")
+            self.refresh()
+        }
+
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -60,10 +57,26 @@ class ViewController: UIViewController {
         
         
     }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    //Method to resfresh the table when the data is loaded
+    func refresh() {
+        var seperate: [String: Double]
+        self.defaultTickers = []
+        self.defaultPrices = []
+        
+        seperate = model.getData()
+        for (k, v) in seperate {
+            self.defaultTickers.append(k)
+            self.defaultPrices.append(v)
+        }
+        self.tickerTable.reloadData()
+        
+        
     }
 
 
@@ -73,7 +86,9 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tickerTable: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //Runs loop until the data is loaded from the api
         return defaultTickers.count
+
     }
     
     func tableView(_ tickerTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,11 +97,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
         //setting background color of cell
         cell.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        
             
         //Filling cell tickerLabel with array index : need to replace with ticker object
         cell.tickerLabel.text = defaultTickers[indexPath.row]
-        cell.priceLabel.text = "$" + defaultPrices[indexPath.row]
-            
+       let dp = defaultPrices[indexPath.row]
+        cell.priceLabel.text = "$\(dp)"
+        
             
         //returning populated cell to tickerTable
         return cell

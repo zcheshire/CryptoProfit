@@ -10,9 +10,9 @@ import Foundation
 
 class Calculator {
 
-    private var positions: [Positions] = []
+    private var positions: [Position] = []
     
-    init(positions: [Positions]) {
+    init(positions: [Position]) {
         self.positions = positions
     }
     

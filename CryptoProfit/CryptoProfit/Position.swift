@@ -20,12 +20,6 @@ class Position {
         self.cryptoPrice = cryptoPrice
         self.positionAmount = positionAmount
         self.open = open
-        let position = Positions(context: context)
-        position.coinType = coinType
-        position.cryptoPrice = cryptoPrice
-        position.open = open
-        position.positionAmount = positionAmount
-        appDelegate.saveContext()
     }
     
     func getCoinType() -> String {
@@ -45,10 +39,6 @@ class Position {
     func isOpen() -> Bool {
         return open
     }
-    
-    
-    
-    
     
     
 }
