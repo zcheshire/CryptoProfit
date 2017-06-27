@@ -18,12 +18,20 @@ class TickerCellController: UITableViewCell {
 class ViewController: UIViewController {
     
     var defaultTickers = ["BTC", "ETH", "ANS", "GNT", "SC"]
-    var defaultPrices = ["2513.90", "313.75", "7.95", "0.45", "0.019"]
+    var defaultPrices = [""]
+    var model = Model()
     
     @IBOutlet weak var tickerTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.refresh(tickers: defaultTickers, base: "USD")
+        //for (key, value) in model.getData() {
+          //  print(value)
+            //defaultPrices.append(value)
+            
+        //}
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         //setting background color of entire canvas
@@ -37,7 +45,7 @@ class ViewController: UIViewController {
         
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: self.view.frame.size.width, height: 44))
         self.view.addSubview(navBar);
-        let navItem = UINavigationItem(title: "Cowboy Killer");
+        let navItem = UINavigationItem(title: "Moon");
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
         navItem.rightBarButtonItem = searchItem;

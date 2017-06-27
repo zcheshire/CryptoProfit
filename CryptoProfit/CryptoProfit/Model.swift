@@ -14,11 +14,11 @@ public class Model {
     private var data: [String: String] = [:]
     
     public func Model(){
-        url = "https://min-api.cryptocompare.com/data/pricemulti?"
     }
     
     public func refresh(tickers: [String], base: String){
         var fsyms = ""
+         url = "https://min-api.cryptocompare.com/data/pricemulti?"
         //var result = ""
         
         for (index, t) in tickers.enumerated() {
@@ -28,7 +28,7 @@ public class Model {
                 fsyms += t
             }
         }
-         var path = url + "fsyms=" + fsyms + "&tsyms=" + base
+         let path = url + "fsyms=" + fsyms + "&tsyms=" + base
         print(path)
         
         let urlString = URL(string: path)
@@ -41,14 +41,21 @@ public class Model {
                 print("HTTP Error")
                 return
             }
-            let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("Response: \(dataString)")
-            self.data[base] = dataString as String?
+            do {
+                let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                guard let responseDict = responseObject as? NSDictionary else {
+                    return
+                }
+                dump(responseDict)
+                self.data = responseDict as! [String : String]
+            } catch let error as NSError {
+                print(error)
+            }
         }
         task.resume()
     }
     
-    public func getData(base: String)-> String {
-        return self.data[base]!
+    public func getPrices()-> [String: String] {
+        return self.data
     }
 }
