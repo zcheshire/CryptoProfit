@@ -92,6 +92,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abP-aT-sha">
+                                <rect key="frame" x="78" y="87" width="218" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -100,6 +107,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="qyJ-Ly-97O"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="portfolioVal" destination="abP-aT-sha" id="WTh-e3-BhN"/>
                         <outlet property="tickerTable" destination="EGM-AA-W4S" id="5fK-DG-VFd"/>
                         <segue destination="sqO-gJ-pee" kind="show" identifier="cellSegue" id="vCT-J1-VSC"/>
                     </connections>

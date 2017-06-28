@@ -23,6 +23,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tickerTable: UITableView!
     
+    @IBOutlet weak var portfolioVal: UILabel!
+    
+    func getPortfolioValue() {
+        portfolioVal = model.getCalculator()
+    }
+    
+    
     var vcPass: String = ""
 
     override func viewDidLoad() {
