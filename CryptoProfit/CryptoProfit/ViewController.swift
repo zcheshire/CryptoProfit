@@ -25,10 +25,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
+        self.refresh()
         defaultTickers = model.getCurrentUser().getWatchList()
+        _ = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (timer) in
             model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
-        _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
-
             self.refresh()
         }
         
@@ -108,8 +109,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.tickerLabel.text = model.getCurrentUser().getWatchList()[indexPath.row]
          let dp = seperate[model.getCurrentUser().getWatchList()[indexPath.row]]
         if dp != nil {
-            print("PLACING LABEL")
-            print(dp)
         cell.priceLabel.text = ("\(dp!)")
         } else {
          cell.priceLabel.text = "0"
@@ -133,6 +132,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         defaultPrices.remove(at: sourceIndexPath.row)
         defaultTickers.insert(tickerTitle, at: destinationIndexPath.row)
         defaultPrices.insert(tickerPrice, at: destinationIndexPath.row)
+        model.getCurrentUser().setWatchList(watchList: defaultTickers)
+        
     }
 
     //Creating cell slide button for delete
