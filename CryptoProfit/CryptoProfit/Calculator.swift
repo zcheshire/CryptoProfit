@@ -11,11 +11,9 @@ import Foundation
 class Calculator {
 
     private var positions: [Position] = []
-    private var data: [String: Double]
+    private var data = model.getData()
     
-    init() {
-        self.data = model.getData()
-    }
+
     
    /*
      Returns users total investment in usd based off of all open positions
