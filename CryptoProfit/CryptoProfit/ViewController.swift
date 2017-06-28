@@ -22,13 +22,15 @@ class ViewController: UIViewController {
     var defaultPrices: [Double] = [0.0,0.0,0.0,0.0,0.0]
 
     @IBOutlet weak var tickerTable: UITableView!
+    
+    var vcPass: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
         self.refresh()
         defaultTickers = model.getCurrentUser().getWatchList()
-        _ = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (timer) in
+        _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (timer) in
             model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
             self.refresh()
         }
@@ -77,6 +79,22 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     //Method to resfresh the table when the data is loaded
+    
+    @objc func tableView(_ tickerTable: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tickerTable.cellForRow(at: indexPath as IndexPath)
+        tickerTable.deselectRow(at: indexPath as IndexPath, animated: true)
+        
+        vcPass = model.getCurrentUser().getWatchList()[indexPath.row]
+        
+        performSegue(withIdentifier: "cellSegue", sender: cell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let passData = vcPass
+        if let destinationVC = segue.destination as? PageViewController {
+            destinationVC.tickerTitle = passData
+        }
+    }
     
     func refresh() {
         self.defaultTickers = []

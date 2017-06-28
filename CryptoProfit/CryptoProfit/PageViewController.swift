@@ -26,6 +26,8 @@ class PositionCellController: UITableViewCell {
 
 class PageViewController: UIViewController {
     
+    var tickerTitle: String? = ""
+    
     @IBOutlet weak var posTable: UITableView!
     
     @IBOutlet weak var openButton: UIButton!
@@ -34,6 +36,8 @@ class PageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print(self.tickerTitle!)
         
         //setting background color of entire canvas
         self.view.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
@@ -47,7 +51,7 @@ class PageViewController: UIViewController {
         //Creating Navigation Bar with Back and Crypto Name
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: self.view.frame.size.width, height: 44))
         self.view.addSubview(navBar);
-        let navItem = UINavigationItem(title: "ETH - Ethereum");
+        let navItem = UINavigationItem(title: tickerTitle!);
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
 //        let backButton = UIButton(type: .custom)
@@ -64,8 +68,8 @@ class PageViewController: UIViewController {
 
     }
     
-    @IBAction func backAction(_ sender: UIButton) {
-        _ = navigationController?.popToRootViewController(animated: true)
+    func backAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "backSegue", sender: Any?.self)
     }
     
     override func didReceiveMemoryWarning() {
