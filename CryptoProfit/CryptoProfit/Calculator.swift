@@ -11,9 +11,10 @@ import Foundation
 class Calculator {
 
     private var positions: [Position] = []
+    private var data: [String: Double]
     
-    init(positions: [Position]) {
-        self.positions = positions
+    init() {
+        self.data = model.getData()
     }
     
    /*
