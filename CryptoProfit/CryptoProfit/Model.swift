@@ -16,7 +16,7 @@ public class Model {
     var data: [String: [String: Any]] = [:]
     //private var tickers: [String] = []
     private var prices: [Double] = []
-    private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: ["ETH","BTC","ANS","GNT","LTC"])
+    private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: ["ETH","ANS","SC","BTC","LTC"])
   
     
     func setCurrentUser(user: User) -> Void {

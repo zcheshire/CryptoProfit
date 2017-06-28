@@ -11,7 +11,6 @@ import Foundation
 class Calculator {
 
     private var positions: [Position] = []
-    private var data = model.getData()
     
 
     
@@ -20,7 +19,7 @@ class Calculator {
  
      */
     func getTotalInvested() -> Double {
-        return 0.0
+     return 0.0
     }
     
     /*
@@ -28,7 +27,20 @@ class Calculator {
      
      */
     func getPortfolioValue() -> Double {
-        return 0.0
+        var data = model.getData()
+        var portfolioValue: Double = 0.0
+        positions = model.getCurrentUser().getPositions()
+        for position in positions {
+                if position.isOpen() {
+                    print(position.getPositionAmount())
+                    print(position.getCoinType())
+                    print(data[position.getCoinType()]!)
+                portfolioValue += (position.getPositionAmount() * data[position.getCoinType()]!)
+                }
+            
+        }
+        
+        return portfolioValue
     }
     
     /*
