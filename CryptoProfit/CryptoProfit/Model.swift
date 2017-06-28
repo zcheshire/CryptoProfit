@@ -25,6 +25,10 @@ public class Model {
     func getCurrentUser() -> User {
         return self.currentUser
     }
+    func getCalculator() -> Calculator {
+        let calculator = Calculator()
+        return calculator
+    }
     
     public func refresh(tickers: [String], base: String){
         print("TICKERS IN REFRESH")
