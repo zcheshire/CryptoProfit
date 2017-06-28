@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,26 +41,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-7M-LAP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-7M-LAP">
                                                     <rect key="frame" x="15" y="14" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="Uo9-vX-LrB"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="18"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mZ-Ha-YKu">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mZ-Ha-YKu">
                                                     <rect key="frame" x="264" y="14" width="96" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="PBy-GV-R5e"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="18"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="h5k-7M-LAP" firstAttribute="firstBaseline" secondItem="1mZ-Ha-YKu" secondAttribute="firstBaseline" id="4Nf-bs-jyu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1mZ-Ha-YKu" secondAttribute="trailing" constant="7" id="9g0-r5-a0e"/>
+                                                <constraint firstItem="h5k-7M-LAP" firstAttribute="centerY" secondItem="11K-UQ-gar" secondAttribute="centerY" id="I1z-cj-goW"/>
+                                                <constraint firstItem="h5k-7M-LAP" firstAttribute="leading" secondItem="11K-UQ-gar" secondAttribute="leadingMargin" constant="7" id="ScI-EU-262"/>
+                                                <constraint firstItem="h5k-7M-LAP" firstAttribute="baseline" secondItem="1mZ-Ha-YKu" secondAttribute="baseline" id="g9m-18-ZzR"/>
+                                                <constraint firstItem="h5k-7M-LAP" firstAttribute="top" secondItem="11K-UQ-gar" secondAttribute="topMargin" constant="6" id="pFV-CB-fr4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="priceLabel" destination="1mZ-Ha-YKu" id="qrn-BC-Th9"/>
                                             <outlet property="tickerLabel" destination="h5k-7M-LAP" id="356-tM-XhJ"/>
-                                            <segue destination="sqO-gJ-pee" kind="show" id="fkh-EY-1dN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -75,7 +88,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZF-TN-rfF" userLabel="Header Line">
-                                <rect key="frame" x="16" y="292" width="343" height="0.5"/>
+                                <rect key="frame" x="16" y="292" width="343" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -88,6 +101,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tickerTable" destination="EGM-AA-W4S" id="5fK-DG-VFd"/>
+                        <segue destination="sqO-gJ-pee" kind="show" identifier="cellSegue" id="vCT-J1-VSC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -216,6 +230,7 @@
                         <outlet property="closeButton" destination="e8c-md-VjV" id="vKa-Dj-xda"/>
                         <outlet property="openButton" destination="Ipw-Dg-r36" id="8FX-AG-1HC"/>
                         <outlet property="posTable" destination="bD3-9w-mM3" id="bBd-uO-N6U"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="backSegue" id="3QX-hD-yiQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUf-6U-hXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
