@@ -25,9 +25,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var portfolioVal: UILabel!
     
-    func getPortfolioValue() {
-        portfolioVal = model.getCalculator()
-    }
+//    func getPortfolioValue() {
+//        portfolioVal.text = model.getCalculator().getPortfolioValue() as! String
+//    }
     
     
     var vcPass: String = ""
