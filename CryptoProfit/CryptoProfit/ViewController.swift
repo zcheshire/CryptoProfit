@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
         self.refresh()
         defaultTickers = model.getCurrentUser().getWatchList()
-        _ = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (timer) in
+        _ = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
             model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
             self.refresh()
         }
