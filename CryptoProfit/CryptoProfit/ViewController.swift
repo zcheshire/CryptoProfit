@@ -25,10 +25,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var portfolioVal: UILabel!
     
-//    func getPortfolioValue() {
-//        portfolioVal.text = model.getCalculator().getPortfolioValue() as! String
-//    }
-    
     
     var vcPass: String = ""
 
@@ -42,8 +38,8 @@ class ViewController: UIViewController {
             self.refresh()
         }
         
+        portfolioVal.text = "$\(model.getCalculator().getPortfolioValue())"
         
-
         
         // Do any additional setup after loading the view, typically from a nib.
         
