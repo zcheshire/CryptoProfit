@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -96,11 +96,52 @@
                         <outlet property="portfolioVal" destination="abP-aT-sha" id="WTh-e3-BhN"/>
                         <outlet property="tickerTable" destination="EGM-AA-W4S" id="5fK-DG-VFd"/>
                         <segue destination="sqO-gJ-pee" kind="show" identifier="cellSegue" id="vCT-J1-VSC"/>
+                        <segue destination="uDY-aK-sf7" kind="show" identifier="searchSegue" id="goO-aO-Xo1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="785" y="139"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Vxn-Ur-w1L">
+            <objects>
+                <viewController id="uDY-aK-sf7" customClass="SearchViewController" customModule="CryptoProfit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wfD-L5-8pb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xYd-Lb-oLH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H0a-qQ-AqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-am-bfd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uDY-aK-sf7" id="ptg-I6-rVG"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="hU9-UX-h9i" id="PUd-h1-kUE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGh-rf-UyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="hU9-UX-h9i">
+                    <connections>
+                        <outlet property="delegate" destination="uDY-aK-sf7" id="gZx-10-526"/>
+                        <outlet property="searchBar" destination="4Ut-am-bfd" id="u3B-ze-FUU"/>
+                        <outlet property="searchContentsController" destination="uDY-aK-sf7" id="IcC-UX-BBy"/>
+                        <outlet property="searchResultsDataSource" destination="uDY-aK-sf7" id="EXt-QK-0wF"/>
+                        <outlet property="searchResultsDelegate" destination="uDY-aK-sf7" id="zbG-LA-FEY"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1368" y="-685"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="HV2-GT-Diw">

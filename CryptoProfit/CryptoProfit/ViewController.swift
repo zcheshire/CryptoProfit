@@ -60,8 +60,10 @@ class ViewController: UIViewController {
         self.view.addSubview(navBar);
         let navItem = UINavigationItem(title: "Moon");
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
+        
+        let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(self.searchAction(_:)))
         navItem.rightBarButtonItem = searchItem;
+        
         let bookmarkItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
         navItem.leftBarButtonItem = bookmarkItem;
         navBar.setItems([navItem], animated: false);
@@ -72,6 +74,11 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func searchAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "searchSegue", sender: Any?.self)
+    }
+
   
 
     override func didReceiveMemoryWarning() {

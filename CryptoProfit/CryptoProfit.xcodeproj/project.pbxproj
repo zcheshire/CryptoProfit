@@ -20,6 +20,7 @@
 		49E67F551F034E6700511B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E67F541F034E6700511B6F /* Main.storyboard */; };
 		49E67F571F034E6C00511B6F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67F561F034E6C00511B6F /* PageViewController.swift */; };
 		49E67F591F034E7300511B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67F581F034E7300511B6F /* ViewController.swift */; };
+		5E53001C1F042FAD004D25B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53001B1F042FAD004D25B6 /* SearchViewController.swift */; };
 		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
 		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
@@ -55,6 +56,7 @@
 		49E67F541F034E6700511B6F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49E67F561F034E6C00511B6F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		49E67F581F034E7300511B6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E53001B1F042FAD004D25B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */,
 				49E67F581F034E7300511B6F /* ViewController.swift */,
 				49E67F561F034E6C00511B6F /* PageViewController.swift */,
+				5E53001B1F042FAD004D25B6 /* SearchViewController.swift */,
 				49E67F521F03336500511B6F /* BackButton.png */,
 				49E67F541F034E6700511B6F /* Main.storyboard */,
 				49E67F501F03335B00511B6F /* openPos.png */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E67F591F034E7300511B6F /* ViewController.swift in Sources */,
+				5E53001C1F042FAD004D25B6 /* SearchViewController.swift in Sources */,
 				491210431F01DE7B004FA63F /* ModelTests.swift in Sources */,
 				497A681C1EFDC18A00ED2758 /* CryptoProfit.xcdatamodeld in Sources */,
 				499400601EFDE32500C61612 /* Calculator.swift in Sources */,
