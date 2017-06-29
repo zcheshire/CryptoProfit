@@ -14,6 +14,7 @@ public class Model {
     private var url: String = ""
     
     var data: [String: [String: Any]] = [:]
+    var Tickers: [String] = []
     //private var tickers: [String] = []
     private var prices: [Double] = []
     private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: ["ETH","ANS","SC","BTC","LTC"])
@@ -64,11 +65,45 @@ public class Model {
                     print("WRONG")
                     return
                 }
-                print(responseDict)
                 self.data = responseDict
                 
 
                
+                
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        task.resume()
+    }
+    public func getTickers(){
+        url = "https://www.cryptocompare.com/api/data/coinlist/"
+    
+        let path = url
+        print(path)
+        let urlString = URL(string: path)
+        let session = URLSession.shared
+        let request = NSMutableURLRequest(url: urlString!)
+        request.httpMethod = "GET"
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+            guard let _: Data = data, let _: URLResponse = response, error == nil else {
+                print("HTTP Error")
+                return
+            }
+            do {
+                let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                guard let responseDictionary = responseObject as? [String: Any] else {
+                    print("WRONG")
+                    return
+                }
+                let temp = responseDictionary["Data"] as! [String: [String: String]]
+                for (_, v) in temp {
+                    self.Tickers.append(v["FullName"]!)
+                    
+                }
+                
+                
                 
             } catch let error as NSError {
                 print(error)
@@ -85,5 +120,7 @@ public class Model {
         }
         return tickersWithPrices
     }
-    
+    func getAllTickers() -> [String] {
+      return self.Tickers
+   }
 }
