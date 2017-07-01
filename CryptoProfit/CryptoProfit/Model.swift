@@ -121,6 +121,7 @@ public class Model {
         return tickersWithPrices
     }
     func getAllTickers() -> [String] {
+        print(self.Tickers)
       return self.Tickers
    }
 }

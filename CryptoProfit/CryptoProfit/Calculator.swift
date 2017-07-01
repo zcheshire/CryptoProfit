@@ -11,8 +11,11 @@ import Foundation
 class Calculator {
 
     private var positions: [Position] = []
-    
+    private var portfolioValue: Double = 0.0
 
+    init() {
+        self.portfolioValue = 0.0
+    }
     
    /*
      Returns users total investment in usd based off of all open positions
@@ -28,7 +31,6 @@ class Calculator {
      */
     func getPortfolioValue() -> Double {
         var data = model.getData()
-        var portfolioValue: Double = 0.0
         positions = model.getCurrentUser().getPositions()
         for position in positions {
                 if position.isOpen() {

@@ -115,33 +115,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-am-bfd">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="27T-rz-82A">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="VWZ-WS-uKg" customClass="SearchCellController" customModule="CryptoProfit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VWZ-WS-uKg" id="oNf-Au-h6n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-hg-Bg7">
+                                                    <rect key="frame" x="16" y="30" width="90" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="10"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHd-XD-5dd">
+                                                    <rect key="frame" x="310" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Add"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYx-Ms-z5c">
+                                                    <rect key="frame" x="16" y="8" width="286" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addTicker" destination="GHd-XD-5dd" id="cPV-1d-Qt8"/>
+                                            <outlet property="fullName" destination="DYx-Ms-z5c" id="V4z-y0-Hqb"/>
+                                            <outlet property="ticker" destination="2Jq-hg-Bg7" id="TK8-uf-2AN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="delegate" destination="uDY-aK-sf7" id="ptg-I6-rVG"/>
+                                    <outlet property="dataSource" destination="uDY-aK-sf7" id="y2k-sB-d18"/>
+                                    <outlet property="delegate" destination="uDY-aK-sf7" id="x8z-Da-Kfd"/>
                                 </connections>
-                            </searchBar>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="hU9-UX-h9i" id="PUd-h1-kUE"/>
+                        <outlet property="searchTable" destination="27T-rz-82A" id="uCv-Da-TW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGh-rf-UyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="hU9-UX-h9i">
                     <connections>
                         <outlet property="delegate" destination="uDY-aK-sf7" id="gZx-10-526"/>
-                        <outlet property="searchBar" destination="4Ut-am-bfd" id="u3B-ze-FUU"/>
                         <outlet property="searchContentsController" destination="uDY-aK-sf7" id="IcC-UX-BBy"/>
                         <outlet property="searchResultsDataSource" destination="uDY-aK-sf7" id="EXt-QK-0wF"/>
                         <outlet property="searchResultsDelegate" destination="uDY-aK-sf7" id="zbG-LA-FEY"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1368" y="-685"/>
+            <point key="canvasLocation" x="1367.2" y="-685.00749625187416"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="HV2-GT-Diw">

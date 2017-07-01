@@ -73,9 +73,9 @@ class User {
         
     }
     
-    
-    
-    
+    func clearPositions() -> Void {
+        self.positions = []
+    }
     
     
 }
