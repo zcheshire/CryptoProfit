@@ -25,7 +25,11 @@ class PositionCellController: UITableViewCell {
 }
 
 class PageViewController: UIViewController {
+    var position: [Position] = []
+
+    @IBOutlet var totalAmount: UILabel!
     
+    @IBOutlet var profitAmount: UILabel!
     var tickerTitle: String? = ""
     
     @IBOutlet weak var posTable: UITableView!
@@ -35,9 +39,14 @@ class PageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalAmount.text = "$\(model.getCalculator().getTotalValueForCoin(coin: self.tickerTitle!))"
+        totalAmount.textColor = .white
+        profitAmount.text = "$\(model.getCalculator().getProfitForCoin(coin: self.tickerTitle!))"
+        profitAmount.textColor = .white
         // Do any additional setup after loading the view, typically from a nib.
         
         print(self.tickerTitle!)
+        position = model.getCurrentUser().getPositionsForTicker(ticker: self.tickerTitle!)
         
         //setting background color of entire canvas
         self.view.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
@@ -99,11 +108,13 @@ extension PageViewController: UITableViewDataSource, UITableViewDelegate {
         cell.price.text = "Price $"
         cell.total.text = "Total $"
         cell.date.text = "Date"
-        
-        cell.quanLabel.text = "2.038"
-        cell.pricLabel.text = "230.00"
-        cell.totLabel.text = "500"
+        for pos in position {
+        cell.quanLabel.text = "\(pos.getPositionAmount())"
+        cell.pricLabel.text = "\(pos.getCrptoPrice())"
+        let total = pos.getPositionAmount() * pos.getCrptoPrice()
+        cell.totLabel.text = "\(total)"
         cell.dateLabel.text = "6/27/17"
+        }
         
         //returning populated cell to tickerTable
         return cell

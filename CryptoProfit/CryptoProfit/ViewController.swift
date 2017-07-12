@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
         portfolioVal.text = "$0"
         model.getCurrentUser().clearPositions()
-        model.getCurrentUser().addPosition(position: Position(coinType: "ETH", cryptoPrice: 360, positionAmount: 10.00528296, open: true))
+        model.getCurrentUser().addPosition(position: Position(coinType: "ETH", cryptoPrice: 260, positionAmount: 10.00528296, open: true))
         model.getCurrentUser().addPosition(position: Position(coinType: "ANS", cryptoPrice: 13 , positionAmount: 68.22148100, open: true))
         model.getCurrentUser().addPosition(position: Position(coinType: "SC", cryptoPrice: 0.02, positionAmount: 4029.53031144, open: true))
         model.getCurrentUser().addPosition(position: Position(coinType: "BTC", cryptoPrice: 0.02, positionAmount: 0.00000019, open: true))

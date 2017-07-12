@@ -58,7 +58,19 @@ class Calculator {
      
      */
     func getProfitForCoin(coin: String) -> Double {
-        return 0.0
+        let currentWorth = getTotalValueForCoin(coin: coin)
+        var initialInvestment = 0.0
+        let pos = model.getCurrentUser().getPositionsForTicker(ticker: coin)
+        for pos in pos {
+            
+            if pos.isOpen() {
+                
+                initialInvestment += pos.getPositionAmount() * pos.getCrptoPrice()
+                
+            }
+            
+        }
+        return currentWorth - initialInvestment
     }
     
     /*
@@ -82,7 +94,20 @@ class Calculator {
      
      */
     func getTotalValueForCoin(coin: String) -> Double {
-        return 0.0
+        var data = model.getData()
+        portfolioValue = 0.0
+        positions = model.getCurrentUser().getPositionsForTicker(ticker: coin)
+        for position in positions {
+            if position.isOpen() {
+                print(position.getPositionAmount())
+                print(position.getCoinType())
+                print(data[position.getCoinType()]!)
+                portfolioValue += (position.getPositionAmount() * data[position.getCoinType()]!)
+            }
+            
+        }
+        
+        return portfolioValue
     }
     
     /*
