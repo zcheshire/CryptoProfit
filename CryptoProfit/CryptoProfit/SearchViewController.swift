@@ -21,8 +21,10 @@ class SearchCellController: UITableViewCell {
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchTable: UITableView!
+
+    var tickerDict: [String: String] = model.getAllTickers()
     
-    var searchList: [String] = model.getAllTickers()
+    var searchList: [String] = []
     
     var filteredSearch: [String] = []
     
@@ -44,6 +46,10 @@ class SearchViewController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         searchTable.tableHeaderView = searchController.searchBar
+        
+        for (_, v) in tickerDict {
+            searchList.append(v)
+        }
         
     }
     
@@ -92,12 +98,18 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
         cell.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
         
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.fullName.text = filteredSearch[indexPath.row]
+            let display = filteredSearch[indexPath.row]
+            var splitArr = display.components(separatedBy: " (")
+            cell.fullName.text = splitArr[0]
             cell.addTicker.tag = indexPath.row
+            cell.ticker.text = "(" + splitArr[1]
         } else {
-            cell.fullName.text = searchList[indexPath.row]
+            let display = searchList[indexPath.row]
+            var splitArr = display.components(separatedBy: " (")
+            cell.fullName.text = splitArr[0]
             cell.addTicker.tag = indexPath.row
-//            cell.addTicker.addTarget(self, action: #selector(self.addAction(_:)), for: UIControlEvents.touchUpInside)
+            cell.ticker.text = "(" + splitArr[1]
+            cell.addTicker.addTarget(self, action: #selector(self.addAction(_:)), for: UIControlEvents.touchUpInside)
         }
         
         //returning populated cell to tickerTable
@@ -105,8 +117,23 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
         
     }
     
-//    func addAction(_ sender: UIButton) {
-//        model.getCurrentUser().addTicker(ticker: filteredSearch[sender.tag])
-//    }
+    func addAction(_ sender: UIButton) {
+        print("monkeyMan")
+        var preParse: String
+        if searchController.isActive && searchController.searchBar.text != "" {
+            preParse = filteredSearch[sender.tag]
+        } else {
+            preParse = searchList[sender.tag]
+        }
+
+        var preParseSplit: [String] = preParse.components(separatedBy: "(")
+        let postParseSplit: [String] = preParseSplit[1].components(separatedBy: ")")
+        let finalTick: String = postParseSplit[0]
+        
+        if (!model.getCurrentUser().getWatchList().contains(finalTick)) {
+            model.getCurrentUser().addTicker(ticker: finalTick)
+        }
+        print(model.getCurrentUser().getWatchList())
+    }
 
 }
