@@ -46,11 +46,20 @@ class SearchViewController: UIViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         searchTable.tableHeaderView = searchController.searchBar
-        
+        let height = searchController.searchBar.frame.height
+       //searchController.searchBar.frame.offsetBy(dx: 30, dy: 0)
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10 , height: height))
+        button.backgroundColor = .black
+        button.setImage( UIImage.init(named: "BackButton"), for: .normal)
+        button.addTarget(self, action: #selector(back), for: .touchUpInside)
+        searchController.searchBar.subviews[0].addSubview(button)
         for (_, v) in tickerDict {
             searchList.append(v)
         }
         
+    }
+    func back(sender: UIButton!) {
+        performSegue(withIdentifier: "backSearch", sender: Any?.self)
     }
     
     func filterContentforSearchText(searchText: String) {
@@ -80,6 +89,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
     func updateSearchResults(for searchController: UISearchController) {
         filterContentforSearchText(searchText: searchController.searchBar.text!)
     }
+    
+    
     
     func tableView(_ searchTable: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Runs loop until the data is loaded from the api
