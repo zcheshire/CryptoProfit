@@ -14,7 +14,7 @@ public class Model {
     private var url: String = ""
     
     var data: [String: [String: Any]] = [:]
-    var Tickers: [String] = []
+    var Tickers: [String: String] = [:]
     //private var tickers: [String] = []
     private var prices: [Double] = []
     private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: ["ETH","ANS","SC","BTC","LTC"])
@@ -99,7 +99,7 @@ public class Model {
                 }
                 let temp = responseDictionary["Data"] as! [String: [String: String]]
                 for (_, v) in temp {
-                    self.Tickers.append(v["FullName"]!)
+                    self.Tickers[v["CoinName"]!] = v["FullName"]
                     
                 }
                 
@@ -120,7 +120,7 @@ public class Model {
         }
         return tickersWithPrices
     }
-    func getAllTickers() -> [String] {
+    func getAllTickers() -> [String: String] {
         print(self.Tickers)
       return self.Tickers
    }
