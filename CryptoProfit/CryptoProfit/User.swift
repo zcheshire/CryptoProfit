@@ -76,6 +76,20 @@ class User {
     func clearPositions() -> Void {
         self.positions = []
     }
+    func getPositionsForTicker(ticker: String) -> [Position] {
+        var tickerPositions: [Position] = []
+        for position in self.positions {
+            
+            if position.getCoinType() == ticker {
+                
+                tickerPositions.append(position)
+                
+            }
+            
+        }
+        return tickerPositions
+        
+    }
     
     
 }
