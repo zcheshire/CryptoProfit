@@ -21,6 +21,7 @@
 		49E67F571F034E6C00511B6F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67F561F034E6C00511B6F /* PageViewController.swift */; };
 		49E67F591F034E7300511B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67F581F034E7300511B6F /* ViewController.swift */; };
 		5E53001C1F042FAD004D25B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53001B1F042FAD004D25B6 /* SearchViewController.swift */; };
+		5E6AF9B81F16FB9C000572DC /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6AF9B71F16FB9C000572DC /* Add.png */; };
 		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
 		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
@@ -57,6 +58,7 @@
 		49E67F561F034E6C00511B6F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		49E67F581F034E7300511B6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E53001B1F042FAD004D25B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5E6AF9B71F16FB9C000572DC /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				49E67F521F03336500511B6F /* BackButton.png */,
 				49E67F541F034E6700511B6F /* Main.storyboard */,
 				49E67F501F03335B00511B6F /* openPos.png */,
+				5E6AF9B71F16FB9C000572DC /* Add.png */,
 				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
 				5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */,
 				5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				497A68211EFDC18A00ED2758 /* LaunchScreen.storyboard in Resources */,
+				5E6AF9B81F16FB9C000572DC /* Add.png in Resources */,
 				49E67F511F03335B00511B6F /* openPos.png in Resources */,
 				5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */,
 				497A681E1EFDC18A00ED2758 /* Assets.xcassets in Resources */,

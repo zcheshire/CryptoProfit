@@ -48,9 +48,10 @@ class SearchViewController: UIViewController {
         searchTable.tableHeaderView = searchController.searchBar
         let height = searchController.searchBar.frame.height
        //searchController.searchBar.frame.offsetBy(dx: 30, dy: 0)
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10 , height: height))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 21 , height: height))
         button.backgroundColor = .black
         button.setImage( UIImage.init(named: "BackButton"), for: .normal)
+        button.backgroundColor = UIColor.clear  
         button.addTarget(self, action: #selector(back), for: .touchUpInside)
         searchController.searchBar.subviews[0].addSubview(button)
         for (_, v) in tickerDict {
@@ -113,12 +114,16 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
             var splitArr = display.components(separatedBy: " (")
             cell.fullName.text = splitArr[0]
             cell.addTicker.tag = indexPath.row
+            cell.addTicker.setImage( UIImage.init(named: "Add"), for: .normal)
+            cell.addTicker.backgroundColor = UIColor.clear
             cell.ticker.text = "(" + splitArr[1]
         } else {
             let display = searchList[indexPath.row]
             var splitArr = display.components(separatedBy: " (")
             cell.fullName.text = splitArr[0]
             cell.addTicker.tag = indexPath.row
+            cell.addTicker.setImage( UIImage.init(named: "Add"), for: .normal)
+            cell.addTicker.backgroundColor = UIColor.clear
             cell.ticker.text = "(" + splitArr[1]
             cell.addTicker.addTarget(self, action: #selector(self.addAction(_:)), for: UIControlEvents.touchUpInside)
         }

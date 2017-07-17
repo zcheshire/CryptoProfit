@@ -39,9 +39,9 @@ class PageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        totalAmount.text = "$\(model.getCalculator().getTotalValueForCoin(coin: self.tickerTitle!))"
+        totalAmount.text = "$" + String(format: "%.2f",model.getCalculator().getTotalValueForCoin(coin: self.tickerTitle!))
         totalAmount.textColor = .white
-        profitAmount.text = "$\(model.getCalculator().getProfitForCoin(coin: self.tickerTitle!))"
+        profitAmount.text = "$" + String(format: "%.2f",model.getCalculator().getProfitForCoin(coin: self.tickerTitle!))
         profitAmount.textColor = .white
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -109,10 +109,10 @@ extension PageViewController: UITableViewDataSource, UITableViewDelegate {
         cell.total.text = "Total $"
         cell.date.text = "Date"
         for pos in position {
-        cell.quanLabel.text = "\(pos.getPositionAmount())"
-        cell.pricLabel.text = "\(pos.getCrptoPrice())"
+        cell.quanLabel.text = String(format: "%.2f",pos.getPositionAmount())
+        cell.pricLabel.text = String(format: "%.2f",pos.getCrptoPrice())
         let total = pos.getPositionAmount() * pos.getCrptoPrice()
-        cell.totLabel.text = "\(total)"
+        cell.totLabel.text = String(format: "%.2f",total)
         cell.dateLabel.text = "6/27/17"
         }
         
