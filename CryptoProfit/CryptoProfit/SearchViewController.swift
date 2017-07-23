@@ -44,8 +44,10 @@ class SearchViewController: UIViewController {
         
         searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search here..."
         definesPresentationContext = true
         searchTable.tableHeaderView = searchController.searchBar
+        
         let height = searchController.searchBar.frame.height
        //searchController.searchBar.frame.offsetBy(dx: 30, dy: 0)
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 21 , height: height))
@@ -60,7 +62,7 @@ class SearchViewController: UIViewController {
         
     }
     func back(sender: UIButton!) {
-        performSegue(withIdentifier: "backSearch", sender: Any?.self)
+        performSegue(withIdentifier: "createPositionSegue", sender: Any?.self)
     }
     
     func filterContentforSearchText(searchText: String) {

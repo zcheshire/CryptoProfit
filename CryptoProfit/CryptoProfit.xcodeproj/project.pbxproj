@@ -27,6 +27,7 @@
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
 		5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */; };
 		5EAA88781F00BCF200742DDB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAA88771F00BCF200742DDB /* logo.png */; };
+		5EC04CAB1F1D524D00A46455 /* PositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC04CAA1F1D524D00A46455 /* PositionViewController.swift */; };
 		8CC67F721EFDD17600260AB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F711EFDD17600260AB9 /* Model.swift */; };
 		8CC67F7D1EFDD9EA00260AB9 /* CryptoProfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
 		5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
 		5EAA88771F00BCF200742DDB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5EC04CAA1F1D524D00A46455 /* PositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionViewController.swift; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8CC67F7A1EFDD9E900260AB9 /* CryptoProfitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoProfitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoProfitTests.swift; path = CryptoProfitTests/CryptoProfitTests.swift; sourceTree = SOURCE_ROOT; };
@@ -117,6 +119,7 @@
 				5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */,
 				49E67F581F034E7300511B6F /* ViewController.swift */,
 				49E67F561F034E6C00511B6F /* PageViewController.swift */,
+				5EC04CAA1F1D524D00A46455 /* PositionViewController.swift */,
 				5E53001B1F042FAD004D25B6 /* SearchViewController.swift */,
 				49E67F521F03336500511B6F /* BackButton.png */,
 				49E67F541F034E6700511B6F /* Main.storyboard */,
@@ -274,6 +277,7 @@
 				49E67F591F034E7300511B6F /* ViewController.swift in Sources */,
 				5E53001C1F042FAD004D25B6 /* SearchViewController.swift in Sources */,
 				491210431F01DE7B004FA63F /* ModelTests.swift in Sources */,
+				5EC04CAB1F1D524D00A46455 /* PositionViewController.swift in Sources */,
 				497A681C1EFDC18A00ED2758 /* CryptoProfit.xcdatamodeld in Sources */,
 				499400601EFDE32500C61612 /* Calculator.swift in Sources */,
 				4994005E1EFDE30C00C61612 /* User.swift in Sources */,

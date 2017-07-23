@@ -50,7 +50,13 @@ class Calculator {
      
      */
     func getPortfolioProfit() -> Double {
-        return 0.0
+        var finalProfit = 0.0
+        let coinList = model.getCurrentUser().getWatchList()
+        for coin in coinList {
+            finalProfit += getProfitForCoin(coin: coin)
+        }
+        return finalProfit
+        
     }
     
     /*

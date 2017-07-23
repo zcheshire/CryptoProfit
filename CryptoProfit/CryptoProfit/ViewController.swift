@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tickerTable: UITableView!
     
     @IBOutlet weak var portfolioVal: UILabel!
+    @IBOutlet weak var portfolioProfit: UILabel!
     
     
     var vcPass: String = ""
@@ -37,6 +38,9 @@ class ViewController: UIViewController {
             self.refresh()
         }
         portfolioVal.text = "$0"
+        portfolioVal.textColor = .white
+        portfolioProfit.text = "$0"
+        portfolioProfit.textColor = .white
         model.getCurrentUser().clearPositions()
         model.getCurrentUser().addPosition(position: Position(coinType: "ETH", cryptoPrice: 260, positionAmount: 10.00528296, open: true))
         model.getCurrentUser().addPosition(position: Position(coinType: "ANS", cryptoPrice: 13 , positionAmount: 68.22148100, open: true))
@@ -117,7 +121,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         self.tickerTable.reloadData()
         let totalValue = String(format: "%.2f",model.getCalculator().getPortfolioValue())
+        let totalProfit = String(format: "%.2f",model.getCalculator().getPortfolioProfit())
         portfolioVal.text = "$\(totalValue)"
+        portfolioProfit.text = "$\(totalProfit)"
 
         
     }
