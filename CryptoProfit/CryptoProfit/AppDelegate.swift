@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseDatabase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UIApplication.shared.statusBarStyle = .lightContent
+        FIRApp.configure()
         return true
     }
 

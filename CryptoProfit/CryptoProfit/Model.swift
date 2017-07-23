@@ -17,7 +17,7 @@ public class Model {
     var Tickers: [String: String] = [:]
     //private var tickers: [String] = []
     private var prices: [Double] = []
-    private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: ["ETH","ANS","SC","BTC","LTC"])
+    private var currentUser = User(username: "Zac", password: "123", positions: [], tickers: [])
   
     
     func setCurrentUser(user: User) -> Void {
@@ -29,6 +29,12 @@ public class Model {
     func getCalculator() -> Calculator {
         let calculator = Calculator()
         return calculator
+    }
+    func addTickerToDataBase() -> Void {
+         watch.setValue(model.getCurrentUser().getWatchList())
+
+
+        
     }
     
     public func refresh(tickers: [String], base: String){
@@ -76,6 +82,38 @@ public class Model {
         }
         task.resume()
     }
+    public func register(username: String, password: String){
+        url = "ec2-34-229-81-117.compute-1.amazonaws.com/register"
+        //var result = ""
+        //self.tickers = tickers
+        
+        let urlString = URL(string: url)
+        let session = URLSession.shared
+        let request = NSMutableURLRequest(url: urlString!)
+        request.httpMethod = "GET"
+        request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
+        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+            guard let _: Data = data, let _: URLResponse = response, error == nil else {
+                print("HTTP Error")
+                return
+            }
+            do {
+                let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                guard let responseDict = responseObject as? [String: [String: Any]] else {
+                    print("WRONGg")
+                    return
+                }
+                self.data = responseDict
+                
+                
+                
+                
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        task.resume()
+    }
     public func getTickers(){
         url = "https://www.cryptocompare.com/api/data/coinlist/"
     
@@ -94,7 +132,7 @@ public class Model {
             do {
                 let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
                 guard let responseDictionary = responseObject as? [String: Any] else {
-                    print("WRONG")
+                    print("WRONGby")
                     return
                 }
                 let temp = responseDictionary["Data"] as! [String: [String: String]]

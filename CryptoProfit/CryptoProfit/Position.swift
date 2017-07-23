@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import Firebase
+
 
 class Position {
     
@@ -14,12 +17,32 @@ class Position {
     private var cryptoPrice: Double = 0
     private var positionAmount: Double = 0
     private var open: Bool = true
+    private var key: String
+    private var ref: FIRDatabaseReference?
     
-    init(coinType: String, cryptoPrice: Double, positionAmount: Double, open: Bool) {
+    init(coinType: String, cryptoPrice: Double, positionAmount: Double, open: Bool, key: String = "") {
         self.coinType = coinType
         self.cryptoPrice = cryptoPrice
         self.positionAmount = positionAmount
         self.open = open
+        self.key = key
+        self.ref = nil
+    }
+    init(snapshot: FIRDataSnapshot) {
+        key = snapshot.key
+        print("PRINTINT SNAP VALUE")
+        print(snapshot.value!)
+         let snapshotValue = snapshot.value as! [String: AnyObject]
+            print("INITAL")
+            print(snapshotValue)
+            coinType = snapshotValue["name"] as! String
+            cryptoPrice = snapshotValue["price"] as! Double
+            positionAmount = snapshotValue["amount"] as! Double
+            open = snapshotValue["open"] as! Bool
+            
+        
+
+        ref = snapshot.ref
     }
     
     func getCoinType() -> String {
@@ -38,6 +61,14 @@ class Position {
     
     func isOpen() -> Bool {
         return open
+    }
+    func toAnyObject() -> Any {
+        return [
+            "name": coinType,
+            "price": cryptoPrice,
+            "amount": positionAmount,
+            "open": open
+        ]
     }
     
     

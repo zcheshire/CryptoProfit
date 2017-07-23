@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BAA267F80B68AD1F57BB74F /* Pods_CryptoProfitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D36DEBABBCF2E561D6EF6E /* Pods_CryptoProfitTests.framework */; };
 		491210431F01DE7B004FA63F /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491210421F01DE7B004FA63F /* ModelTests.swift */; };
 		497A68141EFDC18A00ED2758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A68131EFDC18A00ED2758 /* AppDelegate.swift */; };
 		497A681C1EFDC18A00ED2758 /* CryptoProfit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 497A681A1EFDC18A00ED2758 /* CryptoProfit.xcdatamodeld */; };
@@ -15,6 +16,8 @@
 		4994005C1EFDE2F500C61612 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994005B1EFDE2F500C61612 /* Position.swift */; };
 		4994005E1EFDE30C00C61612 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994005D1EFDE30C00C61612 /* User.swift */; };
 		499400601EFDE32500C61612 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4994005F1EFDE32500C61612 /* Calculator.swift */; };
+		49B4700D1F192B8F003A6408 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4700C1F192B8F003A6408 /* LandingViewController.swift */; };
+		49DF8BF51F1922E5002794A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49DF8BF41F1922E5002794A0 /* GoogleService-Info.plist */; };
 		49E67F511F03335B00511B6F /* openPos.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E67F501F03335B00511B6F /* openPos.png */; };
 		49E67F531F03336500511B6F /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 49E67F521F03336500511B6F /* BackButton.png */; };
 		49E67F551F034E6700511B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E67F541F034E6700511B6F /* Main.storyboard */; };
@@ -26,6 +29,7 @@
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
 		5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */; };
 		5EAA88781F00BCF200742DDB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAA88771F00BCF200742DDB /* logo.png */; };
+		70A1906C014E50671A1C9C4A /* Pods_CryptoProfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBC094676EE15E308538CA /* Pods_CryptoProfit.framework */; };
 		8CC67F721EFDD17600260AB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F711EFDD17600260AB9 /* Model.swift */; };
 		8CC67F7D1EFDD9EA00260AB9 /* CryptoProfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		218793C5986A3D6333372CCB /* Pods-CryptoProfitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfitTests/Pods-CryptoProfitTests.release.xcconfig"; sourceTree = "<group>"; };
 		491210421F01DE7B004FA63F /* ModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		497A68101EFDC18A00ED2758 /* CryptoProfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoProfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497A68131EFDC18A00ED2758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,21 +56,28 @@
 		4994005B1EFDE2F500C61612 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		4994005D1EFDE30C00C61612 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4994005F1EFDE32500C61612 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		49B4700C1F192B8F003A6408 /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		49DF8BF41F1922E5002794A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49E67F501F03335B00511B6F /* openPos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openPos.png; sourceTree = "<group>"; };
 		49E67F521F03336500511B6F /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		49E67F541F034E6700511B6F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49E67F561F034E6C00511B6F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		49E67F581F034E7300511B6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C05F8599591880287726E1B /* Pods-CryptoProfitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfitTests/Pods-CryptoProfitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E53001B1F042FAD004D25B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
 		5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
 		5EAA88771F00BCF200742DDB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		7AC3DF88384CF1FB7FCE6CE4 /* Pods-CryptoProfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit.debug.xcconfig"; sourceTree = "<group>"; };
+		7EE7564849FBED03AB05FACB /* Pods-CryptoProfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit.release.xcconfig"; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8CC67F7A1EFDD9E900260AB9 /* CryptoProfitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoProfitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptoProfitTests.swift; path = CryptoProfitTests/CryptoProfitTests.swift; sourceTree = SOURCE_ROOT; };
 		8CC67F7E1EFDD9EA00260AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D36DEBABBCF2E561D6EF6E /* Pods_CryptoProfitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoProfitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CBC094676EE15E308538CA /* Pods_CryptoProfit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoProfit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A1906C014E50671A1C9C4A /* Pods_CryptoProfit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAA267F80B68AD1F57BB74F /* Pods_CryptoProfitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +106,8 @@
 				497A68121EFDC18A00ED2758 /* CryptoProfit */,
 				8CC67F7B1EFDD9EA00260AB9 /* CryptoProfitTests */,
 				497A68111EFDC18A00ED2758 /* Products */,
+				7818D26103B2040F426B2E6A /* Pods */,
+				8B5D1A40384385DB0FCEF1C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +133,7 @@
 				49E67F561F034E6C00511B6F /* PageViewController.swift */,
 				5E53001B1F042FAD004D25B6 /* SearchViewController.swift */,
 				49E67F521F03336500511B6F /* BackButton.png */,
+				49B4700C1F192B8F003A6408 /* LandingViewController.swift */,
 				49E67F541F034E6700511B6F /* Main.storyboard */,
 				49E67F501F03335B00511B6F /* openPos.png */,
 				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
@@ -126,6 +143,7 @@
 				497A681D1EFDC18A00ED2758 /* Assets.xcassets */,
 				497A681F1EFDC18A00ED2758 /* LaunchScreen.storyboard */,
 				497A68221EFDC18A00ED2758 /* Info.plist */,
+				49DF8BF41F1922E5002794A0 /* GoogleService-Info.plist */,
 				497A681A1EFDC18A00ED2758 /* CryptoProfit.xcdatamodeld */,
 			);
 			path = CryptoProfit;
@@ -139,6 +157,26 @@
 				4994005B1EFDE2F500C61612 /* Position.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7818D26103B2040F426B2E6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC3DF88384CF1FB7FCE6CE4 /* Pods-CryptoProfit.debug.xcconfig */,
+				7EE7564849FBED03AB05FACB /* Pods-CryptoProfit.release.xcconfig */,
+				5C05F8599591880287726E1B /* Pods-CryptoProfitTests.debug.xcconfig */,
+				218793C5986A3D6333372CCB /* Pods-CryptoProfitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B5D1A40384385DB0FCEF1C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0CBC094676EE15E308538CA /* Pods_CryptoProfit.framework */,
+				B3D36DEBABBCF2E561D6EF6E /* Pods_CryptoProfitTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8CC67F701EFDD15100260AB9 /* Backend */ = {
@@ -164,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 497A68251EFDC18A00ED2758 /* Build configuration list for PBXNativeTarget "CryptoProfit" */;
 			buildPhases = (
+				FB93DE154F58CF8D5987E014 /* [CP] Check Pods Manifest.lock */,
 				497A680C1EFDC18A00ED2758 /* Sources */,
 				497A680D1EFDC18A00ED2758 /* Frameworks */,
 				497A680E1EFDC18A00ED2758 /* Resources */,
+				C866435FC0B31A01F6001E3D /* [CP] Embed Pods Frameworks */,
+				D0B632637961828169718E1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CC67F811EFDD9EA00260AB9 /* Build configuration list for PBXNativeTarget "CryptoProfitTests" */;
 			buildPhases = (
+				18A2A01E6B7AC83276FBF120 /* [CP] Check Pods Manifest.lock */,
 				8CC67F761EFDD9E900260AB9 /* Sources */,
 				8CC67F771EFDD9E900260AB9 /* Frameworks */,
 				8CC67F781EFDD9E900260AB9 /* Resources */,
+				65A6F7C8BDF4924CDEA30D63 /* [CP] Embed Pods Frameworks */,
+				F2B1D91135274B491A711831 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,6 +292,7 @@
 				49E67F531F03336500511B6F /* BackButton.png in Resources */,
 				5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */,
 				49E67F551F034E6700511B6F /* Main.storyboard in Resources */,
+				49DF8BF51F1922E5002794A0 /* GoogleService-Info.plist in Resources */,
 				5EAA88781F00BCF200742DDB /* logo.png in Resources */,
 				5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */,
 			);
@@ -261,6 +306,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18A2A01E6B7AC83276FBF120 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65A6F7C8BDF4924CDEA30D63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoProfitTests/Pods-CryptoProfitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C866435FC0B31A01F6001E3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0B632637961828169718E1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2B1D91135274B491A711831 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoProfitTests/Pods-CryptoProfitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB93DE154F58CF8D5987E014 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		497A680C1EFDC18A00ED2758 /* Sources */ = {
@@ -277,6 +415,7 @@
 				4994005C1EFDE2F500C61612 /* Position.swift in Sources */,
 				49E67F571F034E6C00511B6F /* PageViewController.swift in Sources */,
 				5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */,
+				49B4700D1F192B8F003A6408 /* LandingViewController.swift in Sources */,
 				8CC67F721EFDD17600260AB9 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,13 +545,15 @@
 		};
 		497A68261EFDC18A00ED2758 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC3DF88384CF1FB7FCE6CE4 /* Pods-CryptoProfit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = E55286BQ76;
 				INFOPLIST_FILE = CryptoProfit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.edu.CryptoProfit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cowboykillers.moon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -420,13 +561,15 @@
 		};
 		497A68271EFDC18A00ED2758 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE7564849FBED03AB05FACB /* Pods-CryptoProfit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = E55286BQ76;
 				INFOPLIST_FILE = CryptoProfit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = self.edu.CryptoProfit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cowboykillers.moon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -434,6 +577,7 @@
 		};
 		8CC67F821EFDD9EA00260AB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C05F8599591880287726E1B /* Pods-CryptoProfitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CryptoProfitTests/Info.plist;
@@ -447,6 +591,7 @@
 		};
 		8CC67F831EFDD9EA00260AB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218793C5986A3D6333372CCB /* Pods-CryptoProfitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CryptoProfitTests/Info.plist;

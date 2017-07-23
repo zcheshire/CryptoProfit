@@ -39,6 +39,9 @@ class User {
         return username
         
     }
+    func setPositions(positions: [Position]) -> Void {
+        self.positions = positions
+    }
     
     func getPassword() -> String {
         

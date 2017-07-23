@@ -143,7 +143,10 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
         
         if (!model.getCurrentUser().getWatchList().contains(finalTick)) {
             model.getCurrentUser().addTicker(ticker: finalTick)
+            
+            model.addTickerToDataBase()
         }
+        print("HERE IS IT")
         print(model.getCurrentUser().getWatchList())
     }
 

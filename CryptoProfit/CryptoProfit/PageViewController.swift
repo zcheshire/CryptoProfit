@@ -77,6 +77,101 @@ class PageViewController: UIViewController {
 
     }
     
+    @IBAction func openAction(_ sender: Any) {
+        let alertController = UIAlertController(title: "Add New Position", message: "", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+            let secondTextField = alertController.textFields![1] as UITextField
+            
+         
+            let position = Position(coinType: self.tickerTitle!, cryptoPrice: Double(secondTextField.text!)!, positionAmount: Double(firstTextField.text!)!, open: true)
+            
+            model.getCurrentUser().addPosition(position: position)
+            self.position.append(position)
+
+            let posRef = users.child("positions")
+            let pos = posRef.childByAutoId()
+            //let possRef = posRef.child()
+            
+            pos.setValue(position.toAnyObject())
+            self.totalAmount.text = "$\(model.getCalculator().getTotalValueForCoin(coin: self.tickerTitle!))"
+            self.totalAmount.textColor = .white
+            self.profitAmount.text = "$\(model.getCalculator().getProfitForCoin(coin: self.tickerTitle!))"
+            self.profitAmount.textColor = .white
+            self.posTable.reloadData()
+
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+            
+            
+            
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter coin amount"
+        }
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter coin price"
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    @IBAction func closeAction(_ sender: Any) {
+        let alertController = UIAlertController(title: "Close A Position", message: "", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+            let secondTextField = alertController.textFields![1] as UITextField
+            
+            
+            let position = Position(coinType: self.tickerTitle!, cryptoPrice: Double(secondTextField.text!)!, positionAmount: Double(firstTextField.text!)!, open: false)
+            
+            model.getCurrentUser().addPosition(position: position)
+            self.position.append(position)
+            
+            let posRef = users.child("positions")
+            let pos = posRef.childByAutoId()
+            //let possRef = posRef.child()
+            
+            pos.setValue(position.toAnyObject())
+            self.totalAmount.text = "$\(model.getCalculator().getTotalValueForCoin(coin: self.tickerTitle!))"
+            self.totalAmount.textColor = .white
+            self.profitAmount.text = "$\(model.getCalculator().getProfitForCoin(coin: self.tickerTitle!))"
+            self.profitAmount.textColor = .white
+            self.posTable.reloadData()
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+            
+            
+            
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter coin amount"
+        }
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter coin price"
+        }
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
     func backAction(_ sender: UIButton) {
         performSegue(withIdentifier: "backSegue", sender: Any?.self)
     }
@@ -91,7 +186,11 @@ class PageViewController: UIViewController {
 extension PageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ posTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if position.count <= 0 {
+            
+            return 3
+        }
+        return position.count
     }
     
     func tableView(_ posTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,18 +202,27 @@ extension PageViewController: UITableViewDataSource, UITableViewDelegate {
         
         let posCircle: UIImage = UIImage(named: "openPos.png")!
         cell.posType.image = posCircle
-        
+        print("Beginning loading")
         cell.quantity.text = "Quantity"
         cell.price.text = "Price $"
         cell.total.text = "Total $"
         cell.date.text = "Date"
-        for pos in position {
-        cell.quanLabel.text = "\(pos.getPositionAmount())"
-        cell.pricLabel.text = "\(pos.getCrptoPrice())"
-        let total = pos.getPositionAmount() * pos.getCrptoPrice()
-        cell.totLabel.text = "\(total)"
-        cell.dateLabel.text = "6/27/17"
+        if position.count > 0 {
+            
+            cell.quanLabel.text = "\(position[indexPath.row].getPositionAmount())"
+            cell.pricLabel.text = "\(position[indexPath.row].getCrptoPrice())"
+            let total = position[indexPath.row].getPositionAmount() * position[indexPath.row].getCrptoPrice()
+            cell.totLabel.text = "\(total)"
+            cell.dateLabel.text = "6/27/17"
+            
+        } else {
+        cell.quanLabel.text = "0"
+        cell.pricLabel.text = "$0"
+       // let total = position[indexPath.row].getPositionAmount() * position[indexPath.row].getCrptoPrice()
+        cell.totLabel.text = "$0"
+        cell.dateLabel.text = "0/00/00"
         }
+        
         
         //returning populated cell to tickerTable
         return cell

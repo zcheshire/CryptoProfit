@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseDatabase
 
 class TickerCellController: UITableViewCell {
     
@@ -16,32 +19,40 @@ class TickerCellController: UITableViewCell {
 }
 
 class ViewController: UIViewController {
-    
+    let userID = FIRAuth.auth()?.currentUser?.uid
+
     var seperate: [String: Double] = [:]
-    var defaultTickers: [String] = ["","","","",""]
-    var defaultPrices: [Double] = [0.0,0.0,0.0,0.0,0.0]
+    var defaultTickers: [String] = ["","",""]
+    var defaultPrices: [Double] = [0.0,0.0,0.0]
 
     @IBOutlet weak var tickerTable: UITableView!
     
     @IBOutlet weak var portfolioVal: UILabel!
+    let watchListRef = ref.child("watchList")
+
+
     
     
     var vcPass: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        defaultTickers = model.getCurrentUser().getWatchList()
-        model.refresh(tickers: model.getCurrentUser().getWatchList()  , base: "USD")
-        model.getTickers()
-        _ = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { (timer) in
+        
+        users = ref.child(userID!)
+        
+        print("ZONE2")
+        print(model.getCurrentUser().getWatchList())
+        
+        _ = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { (timer) in
+            model.refresh(tickers: model.getCurrentUser().getWatchList(), base: "USD")
             self.refresh()
         }
+        
+      
+      
+    
         portfolioVal.text = "$0"
-        model.getCurrentUser().clearPositions()
-        model.getCurrentUser().addPosition(position: Position(coinType: "ETH", cryptoPrice: 260, positionAmount: 10.00528296, open: true))
-        model.getCurrentUser().addPosition(position: Position(coinType: "ANS", cryptoPrice: 13 , positionAmount: 68.22148100, open: true))
-        model.getCurrentUser().addPosition(position: Position(coinType: "SC", cryptoPrice: 0.02, positionAmount: 4029.53031144, open: true))
-        model.getCurrentUser().addPosition(position: Position(coinType: "BTC", cryptoPrice: 0.02, positionAmount: 0.00000019, open: true))
+      
     
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -108,6 +119,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func refresh() {
+        
         self.defaultTickers = []
         self.defaultPrices = []
         seperate = model.getData()

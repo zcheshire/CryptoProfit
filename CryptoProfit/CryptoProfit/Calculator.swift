@@ -31,15 +31,19 @@ class Calculator {
      */
     func getPortfolioValue() -> Double {
         var data = model.getData()
+        print("IN METHIOD")
+        print(model.getCurrentUser().getPositions())
+        print(model.getCurrentUser().getPositions().count)
         positions = model.getCurrentUser().getPositions()
         for position in positions {
                 if position.isOpen() {
                     print(position.getPositionAmount())
                     print(position.getCoinType())
-                    print(data[position.getCoinType()]!)
+                    print(position.getCrptoPrice())
+                    //print(data[position.getCoinType()]!)
                 portfolioValue += (position.getPositionAmount() * data[position.getCoinType()]!)
                 }
-            
+                portfolioValue -= (position.getPositionAmount() * data[position.getCoinType()]!)
         }
         
         return portfolioValue
@@ -51,6 +55,23 @@ class Calculator {
      */
     func getPortfolioProfit() -> Double {
         return 0.0
+    }
+    func getAmountOfCoins(coin: String) -> Double {
+        let pos = model.getCurrentUser().getPositionsForTicker(ticker: coin)
+        var amount = 0.0
+        for position in pos {
+            if position.isOpen() {
+                amount += position.getPositionAmount()
+
+            } else {
+                
+                amount -= position.getPositionAmount()
+                
+            }
+            
+        }
+        return amount
+        
     }
     
     /*
@@ -66,6 +87,10 @@ class Calculator {
             if pos.isOpen() {
                 
                 initialInvestment += pos.getPositionAmount() * pos.getCrptoPrice()
+                
+            } else {
+                
+                initialInvestment -= pos.getPositionAmount() * pos.getCrptoPrice()
                 
             }
             
@@ -103,6 +128,10 @@ class Calculator {
                 print(position.getCoinType())
                 print(data[position.getCoinType()]!)
                 portfolioValue += (position.getPositionAmount() * data[position.getCoinType()]!)
+            } else {
+                
+                 portfolioValue -= (position.getPositionAmount() * data[position.getCoinType()]!)
+                
             }
             
         }
