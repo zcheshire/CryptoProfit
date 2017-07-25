@@ -114,10 +114,10 @@ class PageViewController: UIViewController {
         })
         
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter coin amount"
+            textField.placeholder = "Enter coin amount: ex. 1"
         }
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter coin price"
+            textField.placeholder = "Enter coin price: ex. 2700"
         }
         
         alertController.addAction(saveAction)

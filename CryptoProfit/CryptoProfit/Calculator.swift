@@ -42,10 +42,11 @@ class Calculator {
                     print(position.getCrptoPrice())
                     //print(data[position.getCoinType()]!)
                 portfolioValue += (position.getPositionAmount() * data[position.getCoinType()]!)
-                }
+                } else {
                 portfolioValue -= (position.getPositionAmount() * data[position.getCoinType()]!)
+            }
         }
-        
+        print(portfolioValue)
         return portfolioValue
     }
     

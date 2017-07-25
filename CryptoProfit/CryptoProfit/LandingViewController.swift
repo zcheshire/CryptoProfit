@@ -72,6 +72,20 @@ class LandingViewController: UIViewController {
             }
         }
     }
+    func removeWatchListItem(ticker: String) -> Void {
+        var arr: [String] = []
+        for tic in model.getCurrentUser().getWatchList() {
+            
+            if tic != ticker {
+                
+                arr.append(tic)
+                
+            }
+            
+        }
+
+        watch.setValue(arr)
+    }
     func setUserWatchList() {
                // 1
         watch = users.child("watchList")
