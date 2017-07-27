@@ -83,7 +83,7 @@
                                     <action selector="registerAction:" destination="Dde-du-I9Z" eventType="touchUpInside" id="UHs-qN-JTJ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="CZU-WA-V6r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoHiRes.png" translatesAutoresizingMaskIntoConstraints="NO" id="CZU-WA-V6r">
                                 <rect key="frame" x="154" y="88" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="CZU-WA-V6r" secondAttribute="height" multiplier="1:1" id="Ela-Hx-Boh"/>
@@ -111,7 +111,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Selene" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ov-Gc-xXU">
-                                <rect key="frame" x="101" y="193" width="176" height="20"/>
+                                <rect key="frame" x="101" y="193" width="172" height="20"/>
                                 <fontDescription key="fontDescription" name="Svatxepxpzpietzyzxvprfzqnyr" family="Svatxepxpzpietzyzxvprfzqnyr" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -119,13 +119,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Ov-Gc-xXU" secondAttribute="trailing" constant="82" id="2Sa-jU-F01"/>
                             <constraint firstItem="ZeX-b1-dOG" firstAttribute="top" secondItem="NnE-6X-n5F" secondAttribute="bottom" constant="99" id="9xe-oX-OoC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6TJ-Sz-AHG" secondAttribute="trailing" constant="32" id="Aet-hI-ncD"/>
                             <constraint firstItem="cwx-6P-Qkw" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="150" id="BLU-14-VXv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NnE-6X-n5F" secondAttribute="trailing" constant="34" id="BW8-88-TXG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZeX-b1-dOG" secondAttribute="trailing" constant="32" id="Gfm-Kh-rxI"/>
-                            <constraint firstItem="NnE-6X-n5F" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="33" id="HT4-11-Vln"/>
                             <constraint firstItem="ZSS-vm-5vS" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="32" id="Hut-wv-8ly"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZSS-vm-5vS" secondAttribute="trailing" constant="31" id="KiM-fU-aPv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hO0-3p-ZFc" secondAttribute="trailing" constant="32" id="MRI-wg-8CF"/>
@@ -133,8 +130,9 @@
                             <constraint firstItem="ZeX-b1-dOG" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="32" id="TNH-qb-kn8"/>
                             <constraint firstItem="6TJ-Sz-AHG" firstAttribute="top" secondItem="dqO-6C-pH7" secondAttribute="bottom" constant="7" id="U46-rb-8ke"/>
                             <constraint firstItem="cwx-6P-Qkw" firstAttribute="top" secondItem="ZSS-vm-5vS" secondAttribute="bottom" constant="20" id="V5d-T5-DcQ"/>
-                            <constraint firstItem="6Ov-Gc-xXU" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="85" id="cpJ-QW-TSg"/>
+                            <constraint firstItem="6Ov-Gc-xXU" firstAttribute="centerX" secondItem="NnE-6X-n5F" secondAttribute="centerX" id="cN4-4F-lyc"/>
                             <constraint firstItem="CZU-WA-V6r" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="138" id="dID-h1-Ouv"/>
+                            <constraint firstItem="6Ov-Gc-xXU" firstAttribute="centerX" secondItem="ZeX-b1-dOG" secondAttribute="centerX" id="eMr-Px-Htu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dqO-6C-pH7" secondAttribute="trailing" constant="32" id="fWJ-as-Hxl"/>
                             <constraint firstItem="dqO-6C-pH7" firstAttribute="top" secondItem="hO0-3p-ZFc" secondAttribute="bottom" constant="26" id="gVH-gv-daM"/>
                             <constraint firstItem="LUn-TZ-9wN" firstAttribute="top" secondItem="cwx-6P-Qkw" secondAttribute="bottom" constant="36" id="ggb-BP-d6L"/>
@@ -478,7 +476,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2.png" width="98" height="98"/>
+        <image name="logoHiRes.png" width="294" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="q3M-vv-0KC"/>

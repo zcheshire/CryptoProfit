@@ -26,6 +26,7 @@
 		5E16208C1F296DF300A27AAE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1620891F296DF300A27AAE /* icon.png */; };
 		5E16208D1F296DF300A27AAE /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E16208A1F296DF300A27AAE /* icon2.png */; };
 		5E16208E1F296DF300A27AAE /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E16208B1F296DF300A27AAE /* logo2.png */; };
+		5E1620901F299E3300A27AAE /* logoHiRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E16208F1F299E3300A27AAE /* logoHiRes.png */; };
 		5E53001C1F042FAD004D25B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53001B1F042FAD004D25B6 /* SearchViewController.swift */; };
 		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
 		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
@@ -69,6 +70,7 @@
 		5E1620891F296DF300A27AAE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		5E16208A1F296DF300A27AAE /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		5E16208B1F296DF300A27AAE /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
+		5E16208F1F299E3300A27AAE /* logoHiRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoHiRes.png; sourceTree = "<group>"; };
 		5E53001B1F042FAD004D25B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
@@ -136,14 +138,15 @@
 				49E67F581F034E7300511B6F /* ViewController.swift */,
 				49E67F561F034E6C00511B6F /* PageViewController.swift */,
 				5E53001B1F042FAD004D25B6 /* SearchViewController.swift */,
-				49E67F521F03336500511B6F /* BackButton.png */,
 				49B4700C1F192B8F003A6408 /* LandingViewController.swift */,
 				49E67F541F034E6700511B6F /* Main.storyboard */,
+				497A681D1EFDC18A00ED2758 /* Assets.xcassets */,
+				49E67F521F03336500511B6F /* BackButton.png */,
+				5E16208F1F299E3300A27AAE /* logoHiRes.png */,
 				49E67F501F03335B00511B6F /* openPos.png */,
 				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
 				5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */,
 				5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */,
-				497A681D1EFDC18A00ED2758 /* Assets.xcassets */,
 				5E1620891F296DF300A27AAE /* icon.png */,
 				5E16208A1F296DF300A27AAE /* icon2.png */,
 				5E16208B1F296DF300A27AAE /* logo2.png */,
@@ -298,6 +301,7 @@
 				49E67F531F03336500511B6F /* BackButton.png in Resources */,
 				5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */,
 				5E16208C1F296DF300A27AAE /* icon.png in Resources */,
+				5E1620901F299E3300A27AAE /* logoHiRes.png in Resources */,
 				5E16208E1F296DF300A27AAE /* logo2.png in Resources */,
 				49E67F551F034E6700511B6F /* Main.storyboard in Resources */,
 				49DF8BF51F1922E5002794A0 /* GoogleService-Info.plist in Resources */,
