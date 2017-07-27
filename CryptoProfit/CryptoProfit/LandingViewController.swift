@@ -34,6 +34,9 @@ class LandingViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
         registerButton.layer.cornerRadius = 5
         
+        usernameTextField.tintColor = UIColor(red:0.38, green:0.90, blue:1.00, alpha:1.0)
+        passwordTextField.tintColor = UIColor(red:0.38, green:0.90, blue:1.00, alpha:1.0)
+        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LandingViewController.dismissKeyboard))
         
