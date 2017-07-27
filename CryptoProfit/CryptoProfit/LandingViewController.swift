@@ -21,7 +21,9 @@ class LandingViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: UITextField!
    
+    @IBOutlet weak var loginButton: UIButton!
 
+    @IBOutlet weak var registerButton: UIButton!
 
 
   
@@ -29,7 +31,8 @@ class LandingViewController: UIViewController {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
    
-   
+        loginButton.layer.cornerRadius = 5
+        registerButton.layer.cornerRadius = 5
 
         
     }

@@ -23,12 +23,14 @@
 		49E67F551F034E6700511B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E67F541F034E6700511B6F /* Main.storyboard */; };
 		49E67F571F034E6C00511B6F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67F561F034E6C00511B6F /* PageViewController.swift */; };
 		49E67F591F034E7300511B6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E67F581F034E7300511B6F /* ViewController.swift */; };
+		5E16208C1F296DF300A27AAE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1620891F296DF300A27AAE /* icon.png */; };
+		5E16208D1F296DF300A27AAE /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E16208A1F296DF300A27AAE /* icon2.png */; };
+		5E16208E1F296DF300A27AAE /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E16208B1F296DF300A27AAE /* logo2.png */; };
 		5E53001C1F042FAD004D25B6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E53001B1F042FAD004D25B6 /* SearchViewController.swift */; };
 		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
 		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
 		5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */; };
-		5EAA88781F00BCF200742DDB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EAA88771F00BCF200742DDB /* logo.png */; };
 		70A1906C014E50671A1C9C4A /* Pods_CryptoProfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBC094676EE15E308538CA /* Pods_CryptoProfit.framework */; };
 		8CC67F721EFDD17600260AB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F711EFDD17600260AB9 /* Model.swift */; };
 		8CC67F7D1EFDD9EA00260AB9 /* CryptoProfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */; };
@@ -64,12 +66,14 @@
 		49E67F561F034E6C00511B6F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		49E67F581F034E7300511B6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C05F8599591880287726E1B /* Pods-CryptoProfitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfitTests/Pods-CryptoProfitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E1620891F296DF300A27AAE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		5E16208A1F296DF300A27AAE /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		5E16208B1F296DF300A27AAE /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		5E53001B1F042FAD004D25B6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
 		5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
-		5EAA88771F00BCF200742DDB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		7AC3DF88384CF1FB7FCE6CE4 /* Pods-CryptoProfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE7564849FBED03AB05FACB /* Pods-CryptoProfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit.release.xcconfig"; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -139,8 +143,10 @@
 				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
 				5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */,
 				5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */,
-				5EAA88771F00BCF200742DDB /* logo.png */,
 				497A681D1EFDC18A00ED2758 /* Assets.xcassets */,
+				5E1620891F296DF300A27AAE /* icon.png */,
+				5E16208A1F296DF300A27AAE /* icon2.png */,
+				5E16208B1F296DF300A27AAE /* logo2.png */,
 				497A681F1EFDC18A00ED2758 /* LaunchScreen.storyboard */,
 				497A68221EFDC18A00ED2758 /* Info.plist */,
 				49DF8BF41F1922E5002794A0 /* GoogleService-Info.plist */,
@@ -251,7 +257,7 @@
 				TargetAttributes = {
 					497A680F1EFDC18A00ED2758 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = E55286BQ76;
+						DevelopmentTeam = 25SK7U77CW;
 						ProvisioningStyle = Automatic;
 					};
 					8CC67F791EFDD9E900260AB9 = {
@@ -291,10 +297,12 @@
 				497A681E1EFDC18A00ED2758 /* Assets.xcassets in Resources */,
 				49E67F531F03336500511B6F /* BackButton.png in Resources */,
 				5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */,
+				5E16208C1F296DF300A27AAE /* icon.png in Resources */,
+				5E16208E1F296DF300A27AAE /* logo2.png in Resources */,
 				49E67F551F034E6700511B6F /* Main.storyboard in Resources */,
 				49DF8BF51F1922E5002794A0 /* GoogleService-Info.plist in Resources */,
-				5EAA88781F00BCF200742DDB /* logo.png in Resources */,
 				5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */,
+				5E16208D1F296DF300A27AAE /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,11 +558,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = E55286BQ76;
+				DEVELOPMENT_TEAM = 25SK7U77CW;
 				INFOPLIST_FILE = CryptoProfit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cowboykillers.moon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -566,11 +575,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = E55286BQ76;
+				DEVELOPMENT_TEAM = 25SK7U77CW;
 				INFOPLIST_FILE = CryptoProfit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cowboykillers.moon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
