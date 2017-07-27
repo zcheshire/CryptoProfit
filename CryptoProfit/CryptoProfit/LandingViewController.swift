@@ -74,6 +74,21 @@ class LandingViewController: UIViewController {
                 }
             }
         }
+        //Animate
+        UIView.animate(
+            withDuration: 1.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.2,
+            initialSpringVelocity: 4,
+            options: UIViewAnimationOptions.curveLinear,
+            animations: {
+                
+                [weak self] in self?.registerButton.transform = .identity
+                
+                //            self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
+                //            self.loginButton.isEnabled = false
+                
+            }, completion: { finished in self.registerButton.isEnabled = true })
     }
     func removeWatchListItem(ticker: String) -> Void {
         var arr: [String] = []
