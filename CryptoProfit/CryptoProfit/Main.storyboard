@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,8 +73,7 @@
                                 <rect key="frame" x="48" y="546" width="280" height="37"/>
                                 <color key="backgroundColor" red="0.38431372549019605" green="0.90196078431372551" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="3xN-8D-B8D"/>
-                                    <constraint firstAttribute="width" constant="280" id="vc9-AI-YCM"/>
+                                    <constraint firstAttribute="height" constant="37" id="dUT-fa-khc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="16"/>
                                 <state key="normal" title="Sign Up">
@@ -86,8 +86,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="CZU-WA-V6r">
                                 <rect key="frame" x="154" y="88" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="9uR-QU-P8T"/>
-                                    <constraint firstAttribute="height" constant="70" id="MAp-jQ-gLL"/>
+                                    <constraint firstAttribute="width" secondItem="CZU-WA-V6r" secondAttribute="height" multiplier="1:1" id="Ela-Hx-Boh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Cryptocurrency Portfolio Management Tool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnE-6X-n5F">
@@ -128,6 +127,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZeX-b1-dOG" secondAttribute="trailing" constant="32" id="Gfm-Kh-rxI"/>
                             <constraint firstItem="NnE-6X-n5F" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="33" id="HT4-11-Vln"/>
                             <constraint firstItem="ZSS-vm-5vS" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="32" id="Hut-wv-8ly"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZSS-vm-5vS" secondAttribute="trailing" constant="31" id="KiM-fU-aPv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hO0-3p-ZFc" secondAttribute="trailing" constant="32" id="MRI-wg-8CF"/>
                             <constraint firstItem="6Ov-Gc-xXU" firstAttribute="top" secondItem="CZU-WA-V6r" secondAttribute="bottom" constant="35" id="Sp6-Wb-Zhp"/>
                             <constraint firstItem="ZeX-b1-dOG" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="32" id="TNH-qb-kn8"/>
@@ -143,6 +143,7 @@
                             <constraint firstItem="NnE-6X-n5F" firstAttribute="top" secondItem="6Ov-Gc-xXU" secondAttribute="bottom" constant="8" id="ogJ-Zb-VqE"/>
                             <constraint firstItem="6TJ-Sz-AHG" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="32" id="onR-Np-gkR"/>
                             <constraint firstItem="hO0-3p-ZFc" firstAttribute="top" secondItem="ZeX-b1-dOG" secondAttribute="bottom" constant="7" id="oxn-l7-V7D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwx-6P-Qkw" secondAttribute="trailing" constant="149" id="q7s-hf-K1v"/>
                             <constraint firstItem="CZU-WA-V6r" firstAttribute="top" secondItem="Naa-Lb-G17" secondAttribute="bottom" constant="68" id="zTD-wf-E1Q"/>
                             <constraint firstItem="dqO-6C-pH7" firstAttribute="leading" secondItem="BFU-S2-DvE" secondAttribute="leadingMargin" constant="32" id="zUF-G1-Wu6"/>
                         </constraints>
