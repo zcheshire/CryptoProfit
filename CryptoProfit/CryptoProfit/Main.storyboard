@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZeX-b1-dOG">
-                                <rect key="frame" x="48" y="346" width="279" height="19"/>
+                                <rect key="frame" x="48" y="328" width="279" height="19"/>
                                 <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="17"/>
@@ -44,7 +44,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dqO-6C-pH7">
-                                <rect key="frame" x="48" y="413" width="279" height="19"/>
+                                <rect key="frame" x="48" y="395" width="279" height="19"/>
                                 <color key="backgroundColor" red="0.082352941176470587" green="0.078431372549019607" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="17"/>
@@ -89,31 +89,31 @@
                                     <constraint firstAttribute="width" secondItem="CZU-WA-V6r" secondAttribute="height" multiplier="1:1" id="Ela-Hx-Boh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Cryptocurrency Portfolio Management Tool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnE-6X-n5F">
-                                <rect key="frame" x="49.5" y="237" width="276" height="14"/>
-                                <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Selene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ov-Gc-xXU">
+                                <rect key="frame" x="112" y="188" width="155" height="23"/>
+                                <fontDescription key="fontDescription" name="Svatxepxpzpietzyzxvprfzqnyr" family="Svatxepxpzpietzyzxvprfzqnyr" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hO0-3p-ZFc" userLabel="Separator">
-                                <rect key="frame" x="48" y="377" width="279" height="1"/>
+                                <rect key="frame" x="48" y="359" width="279" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="IGm-nM-yU4"/>
                                 </constraints>
                             </view>
                             <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TJ-Sz-AHG" userLabel="Separator">
-                                <rect key="frame" x="48" y="444" width="279" height="1"/>
+                                <rect key="frame" x="48" y="426" width="279" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="279" id="QaV-oR-qU2"/>
                                     <constraint firstAttribute="height" constant="1" id="b7w-sQ-ar5"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Selene" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ov-Gc-xXU">
-                                <rect key="frame" x="133.5" y="193" width="111.5" height="36"/>
-                                <fontDescription key="fontDescription" name="Svatxepxpzpietzyzxvprfzqnyr" family="Svatxepxpzpietzyzxvprfzqnyr" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Cryptocurrency Portfolio Management Tool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnE-6X-n5F">
+                                <rect key="frame" x="49.5" y="219" width="276" height="14"/>
+                                <fontDescription key="fontDescription" name="Flirgoyqukkgrfzzuspnqztqksn" family="Flirgoyqukkgrfzzuspnqztqksn" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
