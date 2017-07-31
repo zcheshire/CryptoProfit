@@ -57,27 +57,34 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //setting background color of entire canvas
-        self.view.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        self.view.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         //removing emmpty cells from tickerTabel
         tickerTable.tableFooterView = UIView()
         
         //setting background color of tickerTable
-        tickerTable.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        tickerTable.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         //Creating Navigation Bar with Bookmark Placeholder (Menu) and Search
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: self.view.frame.size.width, height: 44))
         self.view.addSubview(navBar);
-        let navItem = UINavigationItem(title: "Moon");
+        
+        let logo = UIImage(named: "smallLogo")
+        let imageView = UIImageView(image: logo)
+        
+        let navItem = UINavigationItem(title: "Selene");
+        navItem.titleView = imageView
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
         let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(self.searchAction(_:)))
         navItem.rightBarButtonItem = searchItem;
         
-        let bookmarkItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks, target: nil, action: #selector(getter: UIAccessibilityCustomAction.selector));
-        navItem.leftBarButtonItem = bookmarkItem;
+//        let bookmarkItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks, target: nil, action: #selector(self.logoutAction(_:))
+//        navItem.leftBarButtonItem = bookmarkItem;
+        
+        
         navBar.setItems([navItem], animated: false);
-        navBar.barTintColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        navBar.barTintColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         navBar.tintColor = UIColor.white
         navBar.isTranslucent = false
         
@@ -87,6 +94,10 @@ class ViewController: UIViewController {
     
     func searchAction(_ sender: UIButton) {
         performSegue(withIdentifier: "searchSegue", sender: Any?.self)
+    }
+    
+    func logoutAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 
   
@@ -145,7 +156,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tickerTable.dequeueReusableCell(withIdentifier: "tickerCell", for: indexPath) as! TickerCellController
 
         //setting background color of cell
-        cell.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
             
         //Filling cell tickerLabel with array index : need to replace with ticker object

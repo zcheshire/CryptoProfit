@@ -31,7 +31,12 @@
 		5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */; };
 		5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */; };
 		5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */; };
+		5E9EE9101F2A62EC002735DF /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9EE90F1F2A62EC002735DF /* menuIcon.png */; };
 		5EAA88701EFF5CDB00742DDB /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */; };
+		5EC870091F2EEE0B00E362F0 /* smallLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC870081F2EEE0B00E362F0 /* smallLogo.png */; };
+		5EC8700B1F2EF03500E362F0 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC8700A1F2EF03500E362F0 /* add.png */; };
+		5EC8700D1F2EF0DB00E362F0 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC8700C1F2EF0DB00E362F0 /* check.png */; };
+		5EC8700F1F2EF54600E362F0 /* searchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC8700E1F2EF54600E362F0 /* searchIcon.png */; };
 		70A1906C014E50671A1C9C4A /* Pods_CryptoProfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBC094676EE15E308538CA /* Pods_CryptoProfit.framework */; };
 		8CC67F721EFDD17600260AB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F711EFDD17600260AB9 /* Model.swift */; };
 		8CC67F7D1EFDD9EA00260AB9 /* CryptoProfitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC67F7C1EFDD9EA00260AB9 /* CryptoProfitTests.swift */; };
@@ -75,7 +80,12 @@
 		5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Light.TTF"; sourceTree = "<group>"; };
 		5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-Medium.TTF"; sourceTree = "<group>"; };
 		5E7A91F01EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINWeb-UltraLight.TTF"; sourceTree = "<group>"; };
+		5E9EE90F1F2A62EC002735DF /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon.png; sourceTree = "<group>"; };
 		5EAA886F1EFF5CDB00742DDB /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
+		5EC870081F2EEE0B00E362F0 /* smallLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallLogo.png; sourceTree = "<group>"; };
+		5EC8700A1F2EF03500E362F0 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		5EC8700C1F2EF0DB00E362F0 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		5EC8700E1F2EF54600E362F0 /* searchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchIcon.png; sourceTree = "<group>"; };
 		7AC3DF88384CF1FB7FCE6CE4 /* Pods-CryptoProfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE7564849FBED03AB05FACB /* Pods-CryptoProfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoProfit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoProfit/Pods-CryptoProfit.release.xcconfig"; sourceTree = "<group>"; };
 		8CC67F711EFDD17600260AB9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -141,8 +151,12 @@
 				49B4700C1F192B8F003A6408 /* LandingViewController.swift */,
 				49E67F541F034E6700511B6F /* Main.storyboard */,
 				497A681D1EFDC18A00ED2758 /* Assets.xcassets */,
+				5EC8700C1F2EF0DB00E362F0 /* check.png */,
+				5EC8700A1F2EF03500E362F0 /* add.png */,
+				5EC8700E1F2EF54600E362F0 /* searchIcon.png */,
+				5E9EE90F1F2A62EC002735DF /* menuIcon.png */,
+				5EC870081F2EEE0B00E362F0 /* smallLogo.png */,
 				49E67F521F03336500511B6F /* BackButton.png */,
-				5E16208F1F299E3300A27AAE /* logoHiRes.png */,
 				49E67F501F03335B00511B6F /* openPos.png */,
 				5E7A91EE1EFDF4BB0071EA1D /* DINWeb-Light.TTF */,
 				5E7A91EF1EFDF4BB0071EA1D /* DINWeb-Medium.TTF */,
@@ -150,6 +164,7 @@
 				5E1620891F296DF300A27AAE /* icon.png */,
 				5E16208A1F296DF300A27AAE /* icon2.png */,
 				5E16208B1F296DF300A27AAE /* logo2.png */,
+				5E16208F1F299E3300A27AAE /* logoHiRes.png */,
 				497A681F1EFDC18A00ED2758 /* LaunchScreen.storyboard */,
 				497A68221EFDC18A00ED2758 /* Info.plist */,
 				49DF8BF41F1922E5002794A0 /* GoogleService-Info.plist */,
@@ -296,15 +311,20 @@
 			files = (
 				497A68211EFDC18A00ED2758 /* LaunchScreen.storyboard in Resources */,
 				49E67F511F03335B00511B6F /* openPos.png in Resources */,
+				5EC8700F1F2EF54600E362F0 /* searchIcon.png in Resources */,
 				5E7A91F31EFDF4BB0071EA1D /* DINWeb-UltraLight.TTF in Resources */,
+				5EC8700B1F2EF03500E362F0 /* add.png in Resources */,
 				497A681E1EFDC18A00ED2758 /* Assets.xcassets in Resources */,
 				49E67F531F03336500511B6F /* BackButton.png in Resources */,
 				5E7A91F21EFDF4BB0071EA1D /* DINWeb-Medium.TTF in Resources */,
 				5E16208C1F296DF300A27AAE /* icon.png in Resources */,
 				5E1620901F299E3300A27AAE /* logoHiRes.png in Resources */,
+				5EC8700D1F2EF0DB00E362F0 /* check.png in Resources */,
 				5E16208E1F296DF300A27AAE /* logo2.png in Resources */,
 				49E67F551F034E6700511B6F /* Main.storyboard in Resources */,
 				49DF8BF51F1922E5002794A0 /* GoogleService-Info.plist in Resources */,
+				5EC870091F2EEE0B00E362F0 /* smallLogo.png in Resources */,
+				5E9EE9101F2A62EC002735DF /* menuIcon.png in Resources */,
 				5E7A91F11EFDF4BB0071EA1D /* DINWeb-Light.TTF in Resources */,
 				5E16208D1F296DF300A27AAE /* icon2.png in Resources */,
 			);

@@ -49,13 +49,13 @@ class PageViewController: UIViewController {
         position = model.getCurrentUser().getPositionsForTicker(ticker: self.tickerTitle!)
         
         //setting background color of entire canvas
-        self.view.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        self.view.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         //removing emmpty cells from tickerTabel
         posTable.tableFooterView = UIView()
         
         //setting background color of tickerTable
-        posTable.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        posTable.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         //Creating Navigation Bar with Back and Crypto Name
         let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.height, width: self.view.frame.size.width, height: 44))
@@ -71,7 +71,7 @@ class PageViewController: UIViewController {
         navItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", style: .plain, target: self, action: #selector(self.backAction(_:)))
 
         navBar.setItems([navItem], animated: false);
-        navBar.barTintColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        navBar.barTintColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         navBar.tintColor = UIColor.white
         navBar.isTranslucent = false
 
@@ -198,7 +198,7 @@ extension PageViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = posTable.dequeueReusableCell(withIdentifier: "posCell", for: indexPath) as! PositionCellController
         
         //setting background color of cell
-        cell.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         let posCircle: UIImage = UIImage(named: "openPos.png")!
         cell.posType.image = posCircle

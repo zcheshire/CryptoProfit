@@ -34,13 +34,13 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //setting background color of entire canvas
-        self.view.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        self.view.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         //removing emmpty cells from tickerTabel
         searchTable.tableFooterView = UIView()
         
         //setting background color of tickerTable
-        searchTable.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        searchTable.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.dimsBackgroundDuringPresentation = false
@@ -106,7 +106,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
         let cell = searchTable.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCellController
         
         //setting background color of cell
-        cell.backgroundColor = UIColor(red:0.02, green:0.11, blue:0.13, alpha:1.0)
+        cell.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         if searchController.isActive && searchController.searchBar.text != "" {
             let display = filteredSearch[indexPath.row]
@@ -130,6 +130,10 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
     
     func addAction(_ sender: UIButton) {
         print("monkeyMan")
+        
+        let check  = UIImage(named: "check")
+        sender.setImage(check, for: [])
+        
         var preParse: String
         if searchController.isActive && searchController.searchBar.text != "" {
             preParse = filteredSearch[sender.tag]
