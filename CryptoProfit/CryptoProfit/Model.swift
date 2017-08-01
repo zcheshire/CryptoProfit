@@ -32,7 +32,15 @@ public class Model {
     }
     func addTickerToDataBase() -> Void {
          watch.setValue(model.getCurrentUser().getWatchList())
+         model.refresh(tickers: model.getCurrentUser().getWatchList(), base: "USD")
 
+
+        
+    }
+    func deleteTicker() -> Void {
+        
+        
+        watch.setValue(model.getCurrentUser().getWatchList())
 
         
     }

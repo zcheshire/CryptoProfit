@@ -147,7 +147,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tickerTable: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Runs loop until the data is loaded from the api
-        return defaultTickers.count
+        return model.getCurrentUser().getWatchList().count
 
     }
     
@@ -193,7 +193,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     //Creating cell slide button for delete
     func tableView(_ tickerTable: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "DELETE") { action, index in
-            print("deleted")
+            var tickers = model.getCurrentUser().getWatchList()
+            print("ENTER")
+            tickers.remove(at: index.item)
+            model.getCurrentUser().setWatchList(watchList: tickers)
+            model.deleteTicker()
+            self.refresh()
+            tickerTable.reloadData()
         }
 //        delete.backgroundColor = UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0)
         
