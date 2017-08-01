@@ -129,38 +129,22 @@
             endingLineNumber = "40"
             landmarkName = "init(snapshot:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoProfit.Position.init (snapshot : __ObjC.FIRDataSnapshot) -&gt; CryptoProfit.Position"
-                  moduleName = "CryptoProfit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacharycheshire/Desktop/CryptoProfit/CryptoProfit/CryptoProfit/Position.swift"
-                  timestampString = "522368174.835945"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "1786">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoProfit.Position.init (snapshot : __ObjC.FIRDataSnapshot) -&gt; CryptoProfit.Position"
-                  moduleName = "CryptoProfit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacharycheshire/Desktop/CryptoProfit/CryptoProfit/CryptoProfit/Position.swift"
-                  timestampString = "522368174.838199"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "2638">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoProfit/SearchBarTest.swift"
+            timestampString = "523305467.713954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

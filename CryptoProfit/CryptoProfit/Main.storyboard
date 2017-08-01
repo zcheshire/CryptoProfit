@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dde-du-I9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dde-du-I9Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -247,6 +247,31 @@
             </objects>
             <point key="canvasLocation" x="784.79999999999995" y="138.98050974512745"/>
         </scene>
+        <!--Search Bar Test-->
+        <scene sceneID="gnT-cO-D5z">
+            <objects>
+                <viewController id="QUW-nR-s5s" customClass="SearchBarTest" customModule="CryptoProfit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7BY-Wj-lds"/>
+                        <viewControllerLayoutGuide type="bottom" id="wJS-ca-lOm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XNP-jT-4dS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-Jk-Fg7">
+                                <rect key="frame" x="0.0" y="43" width="375" height="624"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0N-6r-XyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293.60000000000002" y="-691.304347826087"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="Vxn-Ur-w1L">
             <objects>
@@ -482,6 +507,6 @@
         <image name="searchIcon.png" width="69" height="66"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3QX-hD-yiQ"/>
+        <segue reference="dos-Mf-gF8"/>
     </inferredMetricsTieBreakers>
 </document>

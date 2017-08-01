@@ -26,13 +26,27 @@ class SearchViewController: UIViewController {
     
     var searchList: [String] = []
     
+    var searchActive: Bool = false
+    
     var filteredSearch: [String] = []
     
-    let searchController = UISearchController(searchResultsController: nil)
+    //let searchController = UISearchController(searchResultsController: nil)
     
+   // var searchBar =  UISearchBar() //searchController.searchBar
+    var mySearchBar: UISearchBar!
+
     
+//    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+//       print("FUCK WITH ME")
+//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        mySearchBar = UISearchBar()
+        mySearchBar.delegate = self
+        mySearchBar.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
+        // hide cancel button
+        mySearchBar.showsCancelButton = false
         //setting background color of entire canvas
         self.view.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
@@ -42,25 +56,17 @@ class SearchViewController: UIViewController {
         //setting background color of tickerTable
         searchTable.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
-        searchController.searchResultsUpdater = self as UISearchResultsUpdating
-        searchController.dimsBackgroundDuringPresentation = false
-        definesPresentationContext = true
-        searchTable.tableHeaderView = searchController.searchBar
-        let height = searchController.searchBar.frame.height
-       //searchController.searchBar.frame.offsetBy(dx: 30, dy: 0)
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 10 , height: height))
-        button.backgroundColor = .black
-        button.setImage( UIImage.init(named: "BackButton"), for: .normal)
-        button.addTarget(self, action: #selector(back), for: .touchUpInside)
-        searchController.searchBar.subviews[0].addSubview(button)
-        for (_, v) in tickerDict {
+       // mySearchBar.searchResultsUpdater = self as UISearchResultsUpdating
+       // searchController.dimsBackgroundDuringPresentation = false
+       // definesPresentationContext = true
+        searchTable.tableHeaderView = mySearchBar
+               for (_, v) in tickerDict {
             searchList.append(v)
         }
+        //searchList.append("ETHEREUM (ETH)")
         
     }
-    func back(sender: UIButton!) {
-        performSegue(withIdentifier: "backSearch", sender: Any?.self)
-    }
+  
     
     func filterContentforSearchText(searchText: String) {
         
@@ -84,17 +90,37 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         filterContentforSearchText(searchText: searchController.searchBar.text!)
+    }
+    // called whenever text is changed.
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterContentforSearchText(searchText: mySearchBar.text!)
+    }
+    // called when cancel button is clicked
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        performSegue(withIdentifier: "backSearch", sender: Any?.self)
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+        mySearchBar.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+        mySearchBar.showsCancelButton = false
+
     }
     
     
     
     func tableView(_ searchTable: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Runs loop until the data is loaded from the api
-        if searchController.isActive && searchController.searchBar.text != "" {
+       // mySearchBar.isActive &&
+        if searchActive && mySearchBar.text != "" {
             return filteredSearch.count
         }
         return searchList.count
@@ -107,8 +133,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
         
         //setting background color of cell
         cell.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
-        
-        if searchController.isActive && searchController.searchBar.text != "" {
+        // mySearchBar.isActive &&
+        if searchActive && mySearchBar.text != "" {
             let display = filteredSearch[indexPath.row]
             var splitArr = display.components(separatedBy: " (")
             cell.fullName.text = splitArr[0]
@@ -135,7 +161,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
         sender.setImage(check, for: [])
         
         var preParse: String
-        if searchController.isActive && searchController.searchBar.text != "" {
+        // searchController.isActive &&
+        if searchActive && mySearchBar.text != "" {
             preParse = filteredSearch[sender.tag]
         } else {
             preParse = searchList[sender.tag]
