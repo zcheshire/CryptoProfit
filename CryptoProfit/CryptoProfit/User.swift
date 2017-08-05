@@ -28,6 +28,19 @@ class User {
     func addTicker(ticker: String) -> Void {
         self.watchListTickers.append(ticker)
     }
+    func removeTicker(ticker: String) -> Void {
+        var tempWatchListTickers: [String] = []
+        for tick in watchListTickers {
+            
+            if tick != ticker {
+                
+                
+                tempWatchListTickers.append(tick)
+            }
+            
+        }
+        watchListTickers = tempWatchListTickers
+    }
     func setWatchList(watchList: [String]) -> Void {
         
         self.watchListTickers = watchList

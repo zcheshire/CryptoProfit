@@ -144,8 +144,8 @@ class LandingViewController: UIViewController {
 
                 } else {
                     print("HARD SET")
-                    model.getCurrentUser().setWatchList(watchList: ["BTC","ETH","LTC"])
-                    watch.setValue(["BTC","ETH","LTC"])
+                    //model.getCurrentUser().setWatchList(watchList: ["BTC","ETH","LTC"])
+                    //watch.setValue(["BTC","ETH","LTC"])
 
                 }
                 

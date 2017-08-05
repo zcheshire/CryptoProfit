@@ -21,6 +21,8 @@ class SearchCellController: UITableViewCell {
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchTable: UITableView!
+    
+    var cellStates: [String: Bool] = [:]
 
     var tickerDict: [String: String] = model.getAllTickers()
     
@@ -62,7 +64,11 @@ class SearchViewController: UIViewController {
         searchTable.tableHeaderView = mySearchBar
                for (_, v) in tickerDict {
             searchList.append(v)
+            cellStates[v] = false
+            
         }
+        print("CELL STATE COUNT")
+        print(cellStates.count)
         //searchList.append("ETHEREUM (ETH)")
         
     }
@@ -80,7 +86,14 @@ class SearchViewController: UIViewController {
         filteredSearch = searchList.filter{$0.lowercased().contains(searchText.lowercased())}
         
         print(filteredSearch)
-        
+        var states: [String: Bool] = [:]
+        for item in filteredSearch {
+            
+            states[item] = cellStates[item]
+            
+        }
+        cellStates = states
+     
         searchTable.reloadData()
     }
     
@@ -107,6 +120,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
         mySearchBar.showsCancelButton = true
+        
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -140,6 +154,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
             cell.fullName.text = splitArr[0]
             cell.addTicker.tag = indexPath.row
             cell.ticker.text = "(" + splitArr[1]
+            let uncheck = UIImage(named: "add")
+            cell.addTicker.setImage(uncheck, for: [])
         } else {
             let display = searchList[indexPath.row]
             var splitArr = display.components(separatedBy: " (")
@@ -147,6 +163,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
             cell.addTicker.tag = indexPath.row
             cell.ticker.text = "(" + splitArr[1]
             cell.addTicker.addTarget(self, action: #selector(self.addAction(_:)), for: UIControlEvents.touchUpInside)
+            let uncheck = UIImage(named: "add")
+            cell.addTicker.setImage(uncheck, for: [])
         }
         
         //returning populated cell to tickerTable
@@ -157,28 +175,111 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate, UISe
     func addAction(_ sender: UIButton) {
         print("monkeyMan")
         
-        let check  = UIImage(named: "check")
-        sender.setImage(check, for: [])
-        
-        var preParse: String
-        // searchController.isActive &&
-        if searchActive && mySearchBar.text != "" {
-            preParse = filteredSearch[sender.tag]
-        } else {
-            preParse = searchList[sender.tag]
-        }
-
-        var preParseSplit: [String] = preParse.components(separatedBy: "(")
-        let postParseSplit: [String] = preParseSplit[1].components(separatedBy: ")")
-        let finalTick: String = postParseSplit[0]
-        
-        if (!model.getCurrentUser().getWatchList().contains(finalTick)) {
-            model.getCurrentUser().addTicker(ticker: finalTick)
+    
+        if mySearchBar.text != "" {
             
-            model.addTickerToDataBase()
+            if cellStates[filteredSearch[sender.tag]] == false {
+                let check  = UIImage(named: "check")
+                sender.setImage(check, for: [])
+                cellStates[filteredSearch[sender.tag]] = true
+                var preParse: String
+                // searchController.isActive &&
+                if searchActive && mySearchBar.text != "" {
+                    preParse = filteredSearch[sender.tag]
+                } else {
+                    preParse = searchList[sender.tag]
+                }
+                
+                var preParseSplit: [String] = preParse.components(separatedBy: "(")
+                let postParseSplit: [String] = preParseSplit[1].components(separatedBy: ")")
+                let finalTick: String = postParseSplit[0]
+                
+                if (!model.getCurrentUser().getWatchList().contains(finalTick)) {
+                    model.getCurrentUser().addTicker(ticker: finalTick)
+                    
+                    model.addTickerToDataBase()
+                }
+                
+            } else {
+                
+                
+                let uncheck  = UIImage(named: "add")
+                sender.setImage(uncheck, for: [])
+                cellStates[searchList[sender.tag]] = false
+                var preParse: String
+                // searchController.isActive &&
+                if searchActive && mySearchBar.text != "" {
+                    preParse = filteredSearch[sender.tag]
+                } else {
+                    preParse = searchList[sender.tag]
+                }
+                
+                var preParseSplit: [String] = preParse.components(separatedBy: "(")
+                let postParseSplit: [String] = preParseSplit[1].components(separatedBy: ")")
+                let finalTick: String = postParseSplit[0]
+                
+                model.getCurrentUser().removeTicker(ticker: finalTick)
+                
+                model.addTickerToDataBase()
+                
+                
+            }
+            
+        } else {
+            
+            
+            
+            if cellStates[searchList[sender.tag]] == false {
+                
+                let check  = UIImage(named: "check")
+                sender.setImage(check, for: [])
+                cellStates[searchList[sender.tag]] = true
+                var preParse: String
+                // searchController.isActive &&
+                if searchActive && mySearchBar.text != "" {
+                    preParse = filteredSearch[sender.tag]
+                } else {
+                    preParse = searchList[sender.tag]
+                }
+                
+                var preParseSplit: [String] = preParse.components(separatedBy: "(")
+                let postParseSplit: [String] = preParseSplit[1].components(separatedBy: ")")
+                let finalTick: String = postParseSplit[0]
+                
+                if (!model.getCurrentUser().getWatchList().contains(finalTick)) {
+                    model.getCurrentUser().addTicker(ticker: finalTick)
+                    
+                    model.addTickerToDataBase()
+                }
+                
+            } else {
+                
+                
+                let uncheck  = UIImage(named: "add")
+                sender.setImage(uncheck, for: [])
+                cellStates[searchList[sender.tag]] = false
+                var preParse: String
+                // searchController.isActive &&
+                if searchActive && mySearchBar.text != "" {
+                    preParse = filteredSearch[sender.tag]
+                } else {
+                    preParse = searchList[sender.tag]
+                }
+                
+                var preParseSplit: [String] = preParse.components(separatedBy: "(")
+                let postParseSplit: [String] = preParseSplit[1].components(separatedBy: ")")
+                let finalTick: String = postParseSplit[0]
+                
+                    model.getCurrentUser().removeTicker(ticker: finalTick)
+                    
+                    model.addTickerToDataBase()
+                
+                
+                
+            }
+            
+            
         }
-        print("HERE IS IT")
-        print(model.getCurrentUser().getWatchList())
     }
 
 }

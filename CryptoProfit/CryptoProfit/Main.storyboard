@@ -232,10 +232,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.08235294118" green="0.078431372550000003" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Q7U-Xq-Vva">
-                        <barButtonItem key="leftBarButtonItem" image="menuIcon.png" id="tI8-AR-SKl"/>
-                        <barButtonItem key="rightBarButtonItem" image="searchIcon.png" id="qyJ-Ly-97O"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Q7U-Xq-Vva"/>
                     <connections>
                         <outlet property="portfolioVal" destination="abP-aT-sha" id="WTh-e3-BhN"/>
                         <outlet property="tickerTable" destination="EGM-AA-W4S" id="5fK-DG-VFd"/>
@@ -258,15 +255,9 @@
                     <view key="view" contentMode="scaleToFill" id="XNP-jT-4dS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-Jk-Fg7">
-                                <rect key="frame" x="0.0" y="43" width="375" height="624"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DiA-fh-aUO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0N-6r-XyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,10 +366,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5J-gB-xID">
-                                                    <rect key="frame" x="19" y="3" width="37" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDe-gx-Iib">
                                                     <rect key="frame" x="82" y="19" width="42" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -435,6 +422,10 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5J-gB-xID">
+                                                    <rect key="frame" x="17" y="11" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -503,10 +494,8 @@
     <resources>
         <image name="add.png" width="75" height="75"/>
         <image name="logoHiRes.png" width="294" height="294"/>
-        <image name="menuIcon.png" width="52" height="34"/>
-        <image name="searchIcon.png" width="69" height="66"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dos-Mf-gF8"/>
+        <segue reference="q3M-vv-0KC"/>
     </inferredMetricsTieBreakers>
 </document>

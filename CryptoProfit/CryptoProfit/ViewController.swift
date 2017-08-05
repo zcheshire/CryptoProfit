@@ -20,6 +20,17 @@ class TickerCellController: UITableViewCell {
 
 class ViewController: UIViewController {
     let userID = FIRAuth.auth()?.currentUser?.uid
+    
+    let collectionView: UICollectionView = {
+        
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = UIColor.white
+        return cv
+        
+        
+        
+    }()
 
     var seperate: [String: Double] = [:]
     var defaultTickers: [String] = ["","",""]
@@ -34,9 +45,11 @@ class ViewController: UIViewController {
     
     
     var vcPass: String = ""
+    let blackView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
         users = ref.child(userID!)
         
@@ -78,9 +91,9 @@ class ViewController: UIViewController {
         
         let searchItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(self.searchAction(_:)))
         navItem.rightBarButtonItem = searchItem;
-        
-//        let bookmarkItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.bookmarks, target: nil, action: #selector(self.logoutAction(_:))
-//        navItem.leftBarButtonItem = bookmarkItem;
+
+        let menuItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(openMenu))
+        navItem.leftBarButtonItem = menuItem;
         
         
         navBar.setItems([navItem], animated: false);
@@ -91,7 +104,38 @@ class ViewController: UIViewController {
         
         
     }
-    
+  
+    func openMenu() -> Void {
+        
+        if let window = UIApplication.shared.keyWindow {
+            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+//            collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+
+            window.addSubview(blackView)
+            window.addSubview(collectionView)
+            blackView.frame = window.frame
+            blackView.alpha = 0
+            collectionView.frame = CGRect(x: -window.frame.width/2, y: 0, width: window.frame.width/2, height: window.frame.height)
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.blackView.alpha = 1
+                self.collectionView.frame = CGRect(x: 0, y: 0, width: self.collectionView.frame.width,height: self.collectionView.frame.height)
+                
+            })
+        }
+        
+
+        
+    }
+    func handleDismiss() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.collectionView.frame = CGRect(x: -(UIApplication.shared.keyWindow?.frame.width)!/2, y: 0, width:(UIApplication.shared.keyWindow?.frame.width)!/2, height: (UIApplication.shared.keyWindow?.frame.height)!)
+            
+        })
+        blackView.alpha = 0
+        
+    }
     func searchAction(_ sender: UIButton) {
         performSegue(withIdentifier: "searchSegue", sender: Any?.self)
     }
@@ -106,12 +150,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
 }
 
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     //Method to resfresh the table when the data is loaded
+    
     
     @objc func tableView(_ tickerTable: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tickerTable.cellForRow(at: indexPath as IndexPath)

@@ -201,14 +201,23 @@ extension PageViewController: UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = UIColor(red:0.08, green:0.08, blue:0.15, alpha:1.0)
         
         let posCircle: UIImage = UIImage(named: "openPos.png")!
-        cell.posType.image = posCircle
+        let closeCircle: UIImage = UIImage(named: "closedPos.png")!
+  
         print("Beginning loading")
         cell.quantity.text = "Quantity"
         cell.price.text = "Price $"
         cell.total.text = "Total $"
         cell.date.text = "Date"
         if position.count > 0 {
-            
+            if position[indexPath.row].isOpen() {
+                cell.posType.image = posCircle
+                
+            } else {
+                
+                cell.posType.image = closeCircle
+                
+                
+            }
             cell.quanLabel.text = "\(position[indexPath.row].getPositionAmount())"
             cell.pricLabel.text = "\(position[indexPath.row].getCrptoPrice())"
             let total = position[indexPath.row].getPositionAmount() * position[indexPath.row].getCrptoPrice()

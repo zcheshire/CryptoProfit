@@ -36,14 +36,16 @@ class Calculator {
         print(model.getCurrentUser().getPositions().count)
         positions = model.getCurrentUser().getPositions()
         for position in positions {
-                if position.isOpen() {
+                if position.isOpen() && data[position.getCoinType()] != nil {
                     print(position.getPositionAmount())
                     print(position.getCoinType())
                     print(position.getCrptoPrice())
                     //print(data[position.getCoinType()]!)
                 portfolioValue += (position.getPositionAmount() * data[position.getCoinType()]!)
                 } else {
+                    if data[position.getCoinType()] != nil {
                 portfolioValue -= (position.getPositionAmount() * data[position.getCoinType()]!)
+                    }
             }
         }
         print(portfolioValue)
